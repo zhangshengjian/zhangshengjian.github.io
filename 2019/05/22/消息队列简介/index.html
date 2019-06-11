@@ -131,7 +131,7 @@
 
 
   <meta name="description" content="为什么使用消息队列消息队列常见的使用场景吧，其实场景有很多，但是比较核心的有3个：解耦、异步、削峰。 解耦看这么个场景。A 系统发送数据到 BCD 三个系统，通过接口调用发送。如果 E 系统也要这个数据呢？那如果 C 系统现在不需要了呢？A 系统负责人几乎崩溃……在这个场景中，A 系统跟其它各种乱七八糟的系统严重耦合，A 系统产生一条比较关键的数据，很多系统都需要 A 系统将这个数据发送过来。A">
-<meta name="keywords" content="ActiveMQ,MQ,Kafka,RabbitMQ,RocketMQ">
+<meta name="keywords" content="Kafka,ActiveMQ,MQ,RabbitMQ,RocketMQ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="消息队列简介">
 <meta property="og:url" content="https://zhangshengjian.github.io/2019/05/22/消息队列简介/index.html">
@@ -144,7 +144,7 @@
 <meta property="og:image" content="https://zhangshengjian.github.io/images/pasted-6.png">
 <meta property="og:image" content="https://zhangshengjian.github.io/images/pasted-7.png">
 <meta property="og:image" content="https://zhangshengjian.github.io/images/pasted-8.png">
-<meta property="og:updated_time" content="2019-05-24T13:52:52.741Z">
+<meta property="og:updated_time" content="2019-06-10T11:31:34.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="消息队列简介">
 <meta name="twitter:description" content="为什么使用消息队列消息队列常见的使用场景吧，其实场景有很多，但是比较核心的有3个：解耦、异步、削峰。 解耦看这么个场景。A 系统发送数据到 BCD 三个系统，通过接口调用发送。如果 E 系统也要这个数据呢？那如果 C 系统现在不需要了呢？A 系统负责人几乎崩溃……在这个场景中，A 系统跟其它各种乱七八糟的系统严重耦合，A 系统产生一条比较关键的数据，很多系统都需要 A 系统将这个数据发送过来。A">
@@ -518,7 +518,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-24 21:52:52" itemprop="dateModified" datetime="2019-05-24T21:52:52+08:00">2019-05-24</time>
+                <time title="修改时间：2019-06-10 19:31:34" itemprop="dateModified" datetime="2019-06-10T19:31:34+08:00">2019-06-10</time>
               
             
           </span>
@@ -597,6 +597,10 @@
 <li>解耦</li>
 <li>异步</li>
 <li>削峰</li>
+<li>横向扩展</li>
+<li>安全可靠</li>
+<li>顺序保证（例如 Kafka）</li>
+<li>更多。。。</li>
 </ul>
 <p><b>缺点</b></p>
 <ul>
@@ -742,11 +746,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Kafka/" rel="tag"><i class="fa fa-tag"></i> Kafka</a>
+          
             <a href="/tags/ActiveMQ/" rel="tag"><i class="fa fa-tag"></i> ActiveMQ</a>
           
             <a href="/tags/MQ/" rel="tag"><i class="fa fa-tag"></i> MQ</a>
-          
-            <a href="/tags/Kafka/" rel="tag"><i class="fa fa-tag"></i> Kafka</a>
           
             <a href="/tags/RabbitMQ/" rel="tag"><i class="fa fa-tag"></i> RabbitMQ</a>
           
@@ -858,7 +862,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
