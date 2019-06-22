@@ -1236,7 +1236,7 @@ background-color
   font-size: 15px;
   font-weight: bold;
   line-height: inherit;
-  border-bottom: 1px solid transparent;
+  border-bottom: 3px solid transparent;
   transition-property: border-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
@@ -1244,7 +1244,7 @@ background-color
 }
 .menu .menu-item a:hover,
 .menu .menu-item span.exturl:hover {
-  border-bottom-color: #222;
+  border-bottom-color: #4876ff;
 }
 .menu .menu-item .fa {
   margin-right: 5px;
@@ -1998,7 +1998,7 @@ background-color
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #14e593;
+  background: #9d55a7;
 }
 .feed-link,
 .chat {
@@ -2684,7 +2684,7 @@ embed {
 .menu-item-active a,
 .menu .menu-item a:hover,
 .menu .menu-item span.exturl:hover {
-  border-bottom-color: #222 !important;
+  border-bottom-color: #4876ff !important;
   color: #222;
 }
 @media (max-width: 767px) {
@@ -2758,7 +2758,7 @@ body {
 }
 .header {
   background: rgba(255,255,255,0.7) none repeat scroll !important;
-  height: 220px;
+  height: 256px;
 }
 .footer {
   background: rgba(255,255,255,0.7) none repeat scroll !important;
