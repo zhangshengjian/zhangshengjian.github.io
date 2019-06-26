@@ -1141,12 +1141,12 @@ pre .javascript .function {
   position: relative;
   display: inline-block;
   padding: 0 40px;
-  color: #fff;
+  color: #4876ff;
 background-color
   border-bottom: none;
 }
 .brand:hover {
-  color: #fff;
+  color: #4876ff;
 }
 .logo {
   display: inline-block;
@@ -1998,7 +1998,7 @@ background-color
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6accff;
+  background: #ffff59;
 }
 .feed-link,
 .chat {
