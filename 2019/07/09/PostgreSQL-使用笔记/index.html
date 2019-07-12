@@ -133,14 +133,14 @@
   <meta name="description" content="PostgreSQL 常用命令     命令 解释     /Library/PostgreSQL/11/scripts/runpsql.sh; exit 启动 PostgreSQL，终端执行命令如下（或直接单击 SQL Shell(psql)）   \help &amp;lt;command_name&amp;gt; 查看命令帮助   \l 查看已存在的数据库   \c &amp;lt;database_name&amp;g">
 <meta name="keywords" content="PostgreSQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PostgreSQL 使用笔记">
+<meta property="og:title" content="PostgreSQL 常用命令">
 <meta property="og:url" content="https://zhangshengjian.github.io/2019/07/09/PostgreSQL-使用笔记/index.html">
 <meta property="og:site_name" content="坚持到放弃">
 <meta property="og:description" content="PostgreSQL 常用命令     命令 解释     /Library/PostgreSQL/11/scripts/runpsql.sh; exit 启动 PostgreSQL，终端执行命令如下（或直接单击 SQL Shell(psql)）   \help &amp;lt;command_name&amp;gt; 查看命令帮助   \l 查看已存在的数据库   \c &amp;lt;database_name&amp;g">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-11T08:15:36.231Z">
+<meta property="og:updated_time" content="2019-07-12T03:01:58.321Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PostgreSQL 使用笔记">
+<meta name="twitter:title" content="PostgreSQL 常用命令">
 <meta name="twitter:description" content="PostgreSQL 常用命令     命令 解释     /Library/PostgreSQL/11/scripts/runpsql.sh; exit 启动 PostgreSQL，终端执行命令如下（或直接单击 SQL Shell(psql)）   \help &amp;lt;command_name&amp;gt; 查看命令帮助   \l 查看已存在的数据库   \c &amp;lt;database_name&amp;g">
 
 
@@ -161,7 +161,7 @@
   };
 </script>
 
-  <title>PostgreSQL 使用笔记 | 坚持到放弃</title>
+  <title>PostgreSQL 常用命令 | 坚持到放弃</title>
   
 
 
@@ -472,7 +472,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PostgreSQL 使用笔记
+          <h1 class="post-title" itemprop="name headline">PostgreSQL 常用命令
 
               
             
@@ -515,7 +515,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-11 16:15:36" itemprop="dateModified" datetime="2019-07-11T16:15:36+08:00">2019-07-11</time>
+                <time title="修改时间：2019-07-12 11:01:58" itemprop="dateModified" datetime="2019-07-12T11:01:58+08:00">2019-07-12</time>
               
             
           </span>
@@ -621,18 +621,20 @@
 <td>drop schema &lt;schema_name&gt; cascade</td>
 <td>删除模式（删除一个模式以及其中包含的所有对象）</td>
 </tr>
+<tr>
+<td>\di &lt;table_name&gt;</td>
+<td>查看索引</td>
+</tr>
+<tr>
+<td>drop index &lt;index_name&gt;</td>
+<td>删除索引</td>
+</tr>
+<tr>
+<td>truncate table &lt;table_name&gt;</td>
+<td>清除表数据</td>
+</tr>
 </tbody>
 </table>
-<blockquote>
-<p>EXCLUSION 约束</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE COMPANY7(</span><br><span class="line">   ID INT PRIMARY KEY     NOT NULL,</span><br><span class="line">   NAME           TEXT,</span><br><span class="line">   AGE            INT  ,</span><br><span class="line">   ADDRESS        CHAR(50),</span><br><span class="line">   SALARY         REAL,</span><br><span class="line">   EXCLUDE USING gist</span><br><span class="line">   (NAME WITH =,  -- 如果满足 NAME 相同，AGE 不相同则允许插入，否则不允许插入</span><br><span class="line">   AGE WITH &lt;&gt;)   -- 其比较的结果是如果整个表边式返回 true，则不允许插入，否则允许</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>USING gist 是用于构建和执行的索引一种类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO COMPANY7 VALUES(1, &apos;Paul&apos;, 32, &apos;California&apos;, 20000.00 );</span><br><span class="line">INSERT INTO COMPANY7 VALUES(2, &apos;Paul&apos;, 32, &apos;Texas&apos;, 20000.00 );  </span><br><span class="line">-- 此条数据的 NAME 与第一条相同，且 AGE 与第一条也相同，故满足插入条件</span><br><span class="line">INSERT INTO COMPANY7 VALUES(3, &apos;Paul&apos;, 42, &apos;California&apos;, 20000.00 );</span><br><span class="line">-- 此数据与上面数据的 NAME 相同，但 AGE 不相同，故不允许插入</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>参考网址</p>
-</blockquote>
-<p><a href="https://www.runoob.com/postgresql" target="_blank" rel="noopener">https://www.runoob.com/postgresql</a></p>
 
       
     </div>
@@ -748,6 +750,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/07/12/MySQL-使用问题记录/" rel="prev" title="MySQL 使用问题记录">
+                MySQL 使用问题记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -813,7 +819,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -854,7 +860,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -919,7 +927,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

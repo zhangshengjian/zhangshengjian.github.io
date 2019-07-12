@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zhangshengjian.github.io/2019/07/12/Redis-%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2019-07-12</lastmod>
+  </url>  <url>
+    <loc>https://zhangshengjian.github.io/2019/07/12/MySQL-%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2019-07-12</lastmod>
+  </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/07/09/PostgreSQL-%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2019-07-11</lastmod>
+    <lastmod>2019-07-12</lastmod>
   </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/06/06/ActiveMQ/</loc>
     <lastmod>2019-07-06</lastmod>
