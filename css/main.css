@@ -276,7 +276,6 @@ span.exturl {
   color: #555;
   text-decoration: none;
   outline: none;
-  border-bottom: 1px solid #999;
   cursor: pointer;
 }
 a:hover,
@@ -1998,7 +1997,7 @@ background-color
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cdbb1d;
+  background: #1cf10a;
 }
 .feed-link,
 .chat {
