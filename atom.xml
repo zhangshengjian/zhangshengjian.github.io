@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangshengjian.github.io/"/>
-  <updated>2019-07-12T09:29:31.438Z</updated>
+  <updated>2019-07-13T14:30:13.670Z</updated>
   <id>https://zhangshengjian.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RabbitMQ 安装配置</title>
+    <link href="https://zhangshengjian.github.io/2019/07/13/RabbitMQ-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
+    <id>https://zhangshengjian.github.io/2019/07/13/RabbitMQ-安装配置/</id>
+    <published>2019-07-13T13:55:00.000Z</published>
+    <updated>2019-07-13T14:30:13.670Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Mac-安装-RabbitMQ"><a href="#Mac-安装-RabbitMQ" class="headerlink" title="Mac 安装 RabbitMQ"></a>Mac 安装 RabbitMQ</h4><p>终端运行如下命令即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install rabbitmq</span><br></pre></td></tr></table></figure></p><h4 id="Mac-启动-RabbitMQ"><a href="#Mac-启动-RabbitMQ" class="headerlink" title="Mac 启动 RabbitMQ"></a>Mac 启动 RabbitMQ</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 进入到 RabbitMQ 目录</span><br><span class="line"></span><br><span class="line">cd /usr/local/Cellar/rabbitmq/3.7.16</span><br><span class="line"></span><br><span class="line"># 启动 RabbitMQ</span><br><span class="line">sbin/rabbitmq-server</span><br></pre></td></tr></table></figure><p><img src="/images/pasted-24.png" alt="图一"></p><p>访问地址查看是否安装成功 <a href="http://localhost:15672/，" target="_blank" rel="noopener">http://localhost:15672/，</a> 登录用户名 guest 密码 guest<br><img src="/images/pasted-25.png" alt="图二"><br><img src="/images/pasted-26.png" alt="图三"></p><h4 id="创建帐号并设置其角色为管理员"><a href="#创建帐号并设置其角色为管理员" class="headerlink" title="创建帐号并设置其角色为管理员"></a>创建帐号并设置其角色为管理员</h4><p><img src="/images/pasted-27.png" alt="图四"></p><h4 id="创建一个新的虚拟-host-为：-mall"><a href="#创建一个新的虚拟-host-为：-mall" class="headerlink" title="创建一个新的虚拟 host 为：/mall"></a>创建一个新的虚拟 host 为：/mall</h4><p><img src="/images/pasted-28.png" alt="图五"></p><h4 id="点击-mall-用户进入用户配置页面"><a href="#点击-mall-用户进入用户配置页面" class="headerlink" title="点击 mall 用户进入用户配置页面"></a>点击 mall 用户进入用户配置页面</h4><p><img src="/images/pasted-29.png" alt="图六"></p><h4 id="给-mall-用户配置该虚拟-host-的权限"><a href="#给-mall-用户配置该虚拟-host-的权限" class="headerlink" title="给 mall 用户配置该虚拟 host 的权限"></a>给 mall 用户配置该虚拟 host 的权限</h4><p><img src="/images/pasted-30.png" alt="图七"></p><p>至此，RabbitMQ 的安装和配置完成。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Mac-安装-RabbitMQ&quot;&gt;&lt;a href=&quot;#Mac-安装-RabbitMQ&quot; class=&quot;headerlink&quot; title=&quot;Mac 安装 RabbitMQ&quot;&gt;&lt;/a&gt;Mac 安装 RabbitMQ&lt;/h4&gt;&lt;p&gt;终端运行如下命令即可&lt;br&gt;&lt;fig
+      
+    
+    </summary>
+    
+      <category term="RabbitMQ" scheme="https://zhangshengjian.github.io/categories/RabbitMQ/"/>
+    
+    
+      <category term="RabbitMQ" scheme="https://zhangshengjian.github.io/tags/RabbitMQ/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis 入门</title>
@@ -517,11 +542,11 @@
     
       <category term="Kafka" scheme="https://zhangshengjian.github.io/tags/Kafka/"/>
     
+      <category term="RabbitMQ" scheme="https://zhangshengjian.github.io/tags/RabbitMQ/"/>
+    
       <category term="ActiveMQ" scheme="https://zhangshengjian.github.io/tags/ActiveMQ/"/>
     
       <category term="MQ" scheme="https://zhangshengjian.github.io/tags/MQ/"/>
-    
-      <category term="RabbitMQ" scheme="https://zhangshengjian.github.io/tags/RabbitMQ/"/>
     
       <category term="RocketMQ" scheme="https://zhangshengjian.github.io/tags/RocketMQ/"/>
     
