@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangshengjian.github.io/"/>
-  <updated>2019-07-13T14:30:13.670Z</updated>
+  <updated>2019-07-15T09:53:48.115Z</updated>
   <id>https://zhangshengjian.github.io/</id>
   
   <author>
@@ -17,11 +17,158 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JWT</title>
+    <link href="https://zhangshengjian.github.io/2019/07/15/JWT/"/>
+    <id>https://zhangshengjian.github.io/2019/07/15/JWT/</id>
+    <published>2019-07-15T09:33:00.000Z</published>
+    <updated>2019-07-15T09:53:48.115Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="JWT-简介"><a href="#JWT-简介" class="headerlink" title="JWT 简介"></a>JWT 简介</h4><p>JWT 是 JSON WEB TOKEN 的缩写，它是基于 RFC 7519 标准定义的一种可以安全传输的的 JSON 对象，由于使用了数字签名，所以是可信任和安全的。</p><h4 id="JWT-的组成"><a href="#JWT-的组成" class="headerlink" title="JWT 的组成"></a>JWT 的组成</h4><ul><li>JWT token 的格式：header.payload.signature</li><li><p>header 中用于存放签名的生成算法</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;alg&quot;: &quot;HS512&quot;&#125;</span><br></pre></td></tr></table></figure></li><li><p>payload 中用于存放用户名、token 的生成时间和过期时间</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;sub&quot;:&quot;admin&quot;,&quot;created&quot;:1489079981393,&quot;exp&quot;:1489684781&#125;</span><br></pre></td></tr></table></figure></li><li><p>signature 为以 header 和 payload 生成的签名，一旦 header 和 payload 被篡改，验证将失败</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// secret 为加密算法的密钥</span><br><span class="line">String signature = HMACSHA512(base64UrlEncode(header) + &quot;.&quot; +base64UrlEncode(payload),secret)</span><br></pre></td></tr></table></figure></li></ul><h4 id="JWT-实例"><a href="#JWT-实例" class="headerlink" title="JWT 实例"></a>JWT 实例</h4><p>这是一个 JWT 的字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImNyZWF0ZWQiOjE1NTY3NzkxMjUzMDksImV4cCI6MTU1NzM4MzkyNX0.d-iki0193X0bBOETf2UN3r3PotNIEAV7mzIxxeI5IxFyzzkOZxS0PGfF_SK6wxCv2K8S0cZjMkv6b5bCqc0VBw</span><br></pre></td></tr></table></figure></p><p>可以在该网站上获得解析结果：<a href="https://jwt.io/" target="_blank" rel="noopener">https://jwt.io/</a></p><p><img src="/images/pasted-32.png" alt="图一"></p><h4 id="JWT-实现认证和授权的原理"><a href="#JWT-实现认证和授权的原理" class="headerlink" title="JWT 实现认证和授权的原理"></a>JWT 实现认证和授权的原理</h4><p>用户调用登录接口，登录成功后获取到 JWT 的 token；<br>之后用户每次调用接口都在 http 的 header 中添加一个叫 Authorization 的头，值为 JWT 的 token；<br>后台程序通过对 Authorization 头中信息的解码及数字签名校验来获取其中的用户信息，从而实现认证和授权。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;JWT-简介&quot;&gt;&lt;a href=&quot;#JWT-简介&quot; class=&quot;headerlink&quot; title=&quot;JWT 简介&quot;&gt;&lt;/a&gt;JWT 简介&lt;/h4&gt;&lt;p&gt;JWT 是 JSON WEB TOKEN 的缩写，它是基于 RFC 7519 标准定义的一种可以安全传输的的
+      
+    
+    </summary>
+    
+      <category term="JWT" scheme="https://zhangshengjian.github.io/categories/JWT/"/>
+    
+    
+      <category term="JWT" scheme="https://zhangshengjian.github.io/tags/JWT/"/>
+    
+      <category term="Token" scheme="https://zhangshengjian.github.io/tags/Token/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Security</title>
+    <link href="https://zhangshengjian.github.io/2019/07/15/Spring-Security/"/>
+    <id>https://zhangshengjian.github.io/2019/07/15/Spring-Security/</id>
+    <published>2019-07-15T09:27:00.000Z</published>
+    <updated>2019-07-15T12:10:14.036Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Spring-Security-简介"><a href="#Spring-Security-简介" class="headerlink" title="Spring Security 简介"></a>Spring Security 简介</h4><blockquote><p>Spring Security 是一个强大的可高度定制的认证和授权框架，对于 Spring 应用来说它是一套 Web 安全标准。Spring Security 注重于为 Java 应用提供认证和授权功能，像所有的 Spring 项目一样，它对自定义需求具有强大的扩展性。</p></blockquote><h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><blockquote><p><a href="https://juejin.im/post/5cf90fa5e51d455d6d5357d3" target="_blank" rel="noopener">https://juejin.im/post/5cf90fa5e51d455d6d5357d3</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Spring-Security-简介&quot;&gt;&lt;a href=&quot;#Spring-Security-简介&quot; class=&quot;headerlink&quot; title=&quot;Spring Security 简介&quot;&gt;&lt;/a&gt;Spring Security 简介&lt;/h4&gt;&lt;blockquo
+      
+    
+    </summary>
+    
+      <category term="Spring Security" scheme="https://zhangshengjian.github.io/categories/Spring-Security/"/>
+    
+    
+      <category term="Spring Security" scheme="https://zhangshengjian.github.io/tags/Spring-Security/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Swagger-UI</title>
+    <link href="https://zhangshengjian.github.io/2019/07/15/Swagger-UI/"/>
+    <id>https://zhangshengjian.github.io/2019/07/15/Swagger-UI/</id>
+    <published>2019-07-15T07:45:00.000Z</published>
+    <updated>2019-07-15T08:47:25.306Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Swagger-UI-简介"><a href="#Swagger-UI-简介" class="headerlink" title="Swagger-UI 简介"></a>Swagger-UI 简介</h4><blockquote><p>Swagger-UI 是 HTML, Javascript, CSS 的一个集合，可以动态地根据注解生成在线 API 文档。</p></blockquote><h4 id="Swagger-UI-常用注解"><a href="#Swagger-UI-常用注解" class="headerlink" title="Swagger-UI 常用注解"></a>Swagger-UI 常用注解</h4><ul><li>@Api：用于修饰 Controller 类，生成 Controller 相关文档信息</li><li>@ApiOperation：用于修饰 Controller 类中的方法，生成接口方法相关文档信息</li><li>@ApiParam：用于修饰接口中的参数，生成接口参数相关文档信息</li><li>@ApiModelProperty：用于修饰实体类的属性，当实体类是请求参数或返回结果时，直接生成相关文档信息</li></ul><h4 id="接口文档访问地址"><a href="#接口文档访问地址" class="headerlink" title="接口文档访问地址"></a>接口文档访问地址</h4><blockquote><p><a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html</a></p></blockquote><h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><blockquote><p><a href="https://juejin.im/post/5cf9035cf265da1bb47d54f8" target="_blank" rel="noopener">https://juejin.im/post/5cf9035cf265da1bb47d54f8</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Swagger-UI-简介&quot;&gt;&lt;a href=&quot;#Swagger-UI-简介&quot; class=&quot;headerlink&quot; title=&quot;Swagger-UI 简介&quot;&gt;&lt;/a&gt;Swagger-UI 简介&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;Swagger-UI 是 
+      
+    
+    </summary>
+    
+      <category term="Swagger-UI" scheme="https://zhangshengjian.github.io/categories/Swagger-UI/"/>
+    
+    
+      <category term="Swagger-UI" scheme="https://zhangshengjian.github.io/tags/Swagger-UI/"/>
+    
+      <category term="Api" scheme="https://zhangshengjian.github.io/tags/Api/"/>
+    
+      <category term="Document" scheme="https://zhangshengjian.github.io/tags/Document/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>架构篇 - MySQL数据库连接参数详解</title>
+    <link href="https://zhangshengjian.github.io/2019/07/15/%E6%9E%B6%E6%9E%84%E7%AF%87-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://zhangshengjian.github.io/2019/07/15/架构篇-MySQL数据库连接参数详解/</id>
+    <published>2019-07-15T01:31:00.000Z</published>
+    <updated>2019-07-15T08:27:21.963Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="MySQL-数据库连接"><a href="#MySQL-数据库连接" class="headerlink" title="MySQL 数据库连接"></a>MySQL 数据库连接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jdbc:mysql://localhost:3306/mall?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai</span><br></pre></td></tr></table></figure><table><thead><tr><th>参数</th><th>解释</th></tr></thead><tbody><tr><td>useUnicode=true&amp;characterEncoding=utf-8</td><td>指定字符编码、解码格式</td></tr><tr><td>serverTimezone=Asia/Shanghai</td><td>时区使用中国标准时间</td></tr></tbody></table><h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><blockquote><p><a href="https://blog.csdn.net/yaphets__yj/article/details/77774874" target="_blank" rel="noopener">https://blog.csdn.net/yaphets__yj/article/details/77774874</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;MySQL-数据库连接&quot;&gt;&lt;a href=&quot;#MySQL-数据库连接&quot; class=&quot;headerlink&quot; title=&quot;MySQL 数据库连接&quot;&gt;&lt;/a&gt;MySQL 数据库连接&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="https://zhangshengjian.github.io/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="https://zhangshengjian.github.io/tags/MySQL/"/>
+    
+      <category term="架构" scheme="https://zhangshengjian.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MongoDB 常用命令</title>
+    <link href="https://zhangshengjian.github.io/2019/07/13/MangoDB-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://zhangshengjian.github.io/2019/07/13/MangoDB-常用命令/</id>
+    <published>2019-07-13T15:15:00.000Z</published>
+    <updated>2019-07-13T15:32:14.157Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>mongod -version</td><td>查看 MangoDB 版本</td></tr><tr><td>mongod –dbpath data –logpath log/mongod.log –logappend –fork</td><td>脚本启动或配置文件启动</td></tr><tr><td>–dbpath $dbpath</td><td>数据库数据文件路径</td></tr><tr><td>–logpath $logpath</td><td>日志文件的路径</td></tr><tr><td>–logappend</td><td>以追加的方式打开文件</td></tr><tr><td>–fork</td><td>将数据库服务放在后台运行</td></tr></tbody></table><p><img src="/images/pasted-31.png" alt="图一"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;解释&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;mongod -version&lt;/td&gt;
+&lt;td&gt;查看 MangoDB 版本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mong
+      
+    
+    </summary>
+    
+      <category term="MongoDB" scheme="https://zhangshengjian.github.io/categories/MongoDB/"/>
+    
+    
+      <category term="MongoDB" scheme="https://zhangshengjian.github.io/tags/MongoDB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>RabbitMQ 安装配置</title>
     <link href="https://zhangshengjian.github.io/2019/07/13/RabbitMQ-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
     <id>https://zhangshengjian.github.io/2019/07/13/RabbitMQ-安装配置/</id>
     <published>2019-07-13T13:55:00.000Z</published>
-    <updated>2019-07-13T14:30:13.670Z</updated>
+    <updated>2019-07-13T14:33:51.735Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Mac-安装-RabbitMQ"><a href="#Mac-安装-RabbitMQ" class="headerlink" title="Mac 安装 RabbitMQ"></a>Mac 安装 RabbitMQ</h4><p>终端运行如下命令即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install rabbitmq</span><br></pre></td></tr></table></figure></p><h4 id="Mac-启动-RabbitMQ"><a href="#Mac-启动-RabbitMQ" class="headerlink" title="Mac 启动 RabbitMQ"></a>Mac 启动 RabbitMQ</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 进入到 RabbitMQ 目录</span><br><span class="line"></span><br><span class="line">cd /usr/local/Cellar/rabbitmq/3.7.16</span><br><span class="line"></span><br><span class="line"># 启动 RabbitMQ</span><br><span class="line">sbin/rabbitmq-server</span><br></pre></td></tr></table></figure><p><img src="/images/pasted-24.png" alt="图一"></p><p>访问地址查看是否安装成功 <a href="http://localhost:15672/，" target="_blank" rel="noopener">http://localhost:15672/，</a> 登录用户名 guest 密码 guest<br><img src="/images/pasted-25.png" alt="图二"><br><img src="/images/pasted-26.png" alt="图三"></p><h4 id="创建帐号并设置其角色为管理员"><a href="#创建帐号并设置其角色为管理员" class="headerlink" title="创建帐号并设置其角色为管理员"></a>创建帐号并设置其角色为管理员</h4><p><img src="/images/pasted-27.png" alt="图四"></p><h4 id="创建一个新的虚拟-host-为：-mall"><a href="#创建一个新的虚拟-host-为：-mall" class="headerlink" title="创建一个新的虚拟 host 为：/mall"></a>创建一个新的虚拟 host 为：/mall</h4><p><img src="/images/pasted-28.png" alt="图五"></p><h4 id="点击-mall-用户进入用户配置页面"><a href="#点击-mall-用户进入用户配置页面" class="headerlink" title="点击 mall 用户进入用户配置页面"></a>点击 mall 用户进入用户配置页面</h4><p><img src="/images/pasted-29.png" alt="图六"></p><h4 id="给-mall-用户配置该虚拟-host-的权限"><a href="#给-mall-用户配置该虚拟-host-的权限" class="headerlink" title="给 mall 用户配置该虚拟 host 的权限"></a>给 mall 用户配置该虚拟 host 的权限</h4><p><img src="/images/pasted-30.png" alt="图七"></p><p>至此，RabbitMQ 的安装和配置完成。</p>]]></content>
     
@@ -34,7 +181,7 @@
     
     </summary>
     
-      <category term="RabbitMQ" scheme="https://zhangshengjian.github.io/categories/RabbitMQ/"/>
+      <category term="MQ" scheme="https://zhangshengjian.github.io/categories/MQ/"/>
     
     
       <category term="RabbitMQ" scheme="https://zhangshengjian.github.io/tags/RabbitMQ/"/>
@@ -46,9 +193,9 @@
     <link href="https://zhangshengjian.github.io/2019/07/12/Redis-%E5%85%A5%E9%97%A8/"/>
     <id>https://zhangshengjian.github.io/2019/07/12/Redis-入门/</id>
     <published>2019-07-12T07:59:00.000Z</published>
-    <updated>2019-07-12T09:29:31.438Z</updated>
+    <updated>2019-07-15T08:51:20.819Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>Redis 官网 <a href="http://redis.io/" target="_blank" rel="noopener">http://redis.io/</a></p></blockquote><h4 id="Mac-安装-Redis"><a href="#Mac-安装-Redis" class="headerlink" title="Mac 安装 Redis"></a>Mac 安装 Redis</h4><ul><li>下载 Redis，下载地址：<a href="http://download.redis.io/releases/" target="_blank" rel="noopener">http://download.redis.io/releases/</a></li><li><p>解压 Redis 安装文件到 /usr/local 目录下，并执行如下命令即可</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 编译测试</span><br><span class="line">sudo make test</span><br><span class="line"></span><br><span class="line"># 安装</span><br><span class="line">sudo make install</span><br><span class="line"></span><br><span class="line"># 启动 redis 服务器</span><br><span class="line">redis-server</span><br></pre></td></tr></table></figure></li><li><p>至此安装完毕<br><img src="/images/pasted-22.png" alt="图一"></p></li></ul><h4 id="Redis-配置"><a href="#Redis-配置" class="headerlink" title="Redis 配置"></a>Redis 配置</h4><ul><li><p>在 /usr/local 目录创建 bin, etc 两个文件夹，在 redis 目录下创建 db 文件夹</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/local/bin</span><br><span class="line">sudo mkdir /usr/local/etc</span><br><span class="line">sudo mkdir /usr/local/redis-xxx/db</span><br></pre></td></tr></table></figure></li><li><p>将 /usr/local/redis-x.x.x/src 目录下的 mkreleasehdr.sh, redis-benchmark, redis-check-rdb, redis-cli, redis server 拷贝至 /usr/local/bin 目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/local/redis-x.x.x/src/mkreleasehdr.sh /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-benchmark /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-check-rdb /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-cli /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-server /usr/local/bin</span><br></pre></td></tr></table></figure></li><li><p>将 redis.conf 拷贝至目录 etc</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/local/redis-x.x.x/redis.conf /usr/local/etc</span><br></pre></td></tr></table></figure></li><li><p>修改 redis.conf<br>进入 redis/etc 目录，修改 redis.conf，如下内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"># 修改为守护模式</span><br><span class="line"> </span><br><span class="line">daemonize yes</span><br><span class="line"></span><br><span class="line"># 设置进程锁文件</span><br><span class="line"> </span><br><span class="line">pidfile /usr/local/redis/redis.pid</span><br><span class="line"></span><br><span class="line"># 端口</span><br><span class="line"> </span><br><span class="line">port 6379</span><br><span class="line"></span><br><span class="line"># 客户端超时时间</span><br><span class="line"></span><br><span class="line">timeout 300</span><br><span class="line"></span><br><span class="line"># 日志级别</span><br><span class="line"> </span><br><span class="line">loglevel debug</span><br><span class="line"></span><br><span class="line"># 日志文件位置</span><br><span class="line"> </span><br><span class="line">logfile /usr/local/redis/log-redis.log</span><br><span class="line"></span><br><span class="line"># 设置数据库的数量，默认数据库为0，可以使用 SELECT &lt;dbid&gt; 命令在连接上指定数据库id</span><br><span class="line"> </span><br><span class="line">databases 8</span><br><span class="line"></span><br><span class="line"># 指定在多长时间内，有多少次更新操作，就将数据同步到数据文件，可以多个条件配合</span><br><span class="line"># save &lt;seconds&gt; &lt;changes&gt;</span><br><span class="line"># Redis 默认配置文件中提供了三个条件：</span><br><span class="line"> </span><br><span class="line">save 900 1</span><br><span class="line">save 300 10</span><br><span class="line">save 60 10000</span><br><span class="line"></span><br><span class="line"># 指定存储至本地数据库时是否压缩数据，默认为 yes，Redis 采用 LZF 压缩，如果为了节省 CPU 时间，可以关闭该#选项，但会导致数据库文件变的巨大</span><br><span class="line"></span><br><span class="line">rdbcompression yes</span><br><span class="line"></span><br><span class="line"># 指定本地数据库文件名</span><br><span class="line"> </span><br><span class="line">dbfilename dump.rdb</span><br><span class="line"> </span><br><span class="line"># 指定本地数据库路径</span><br><span class="line"> </span><br><span class="line">dir /usr/local/redis/db/</span><br><span class="line"></span><br><span class="line"># 指定是否在每次更新操作后进行日志记录，Redis在默认情况下是异步的把数据写入磁盘，如果不开启，可能会在断电时导致一段时间内的数据丢失。</span><br><span class="line"># 因为 redis本身同步数据文件是按上面save条件来同步的，所以有的数据会在一段时间内只存在于内存中</span><br><span class="line"> </span><br><span class="line">appendonly no</span><br><span class="line"></span><br><span class="line"># 指定更新日志条件，共有3个可选值：</span><br><span class="line"># no：表示等操作系统进行数据缓存同步到磁盘（快）</span><br><span class="line"># always：表示每次更新操作后手动调用 fsync() 将数据写到磁盘（慢，安全）</span><br><span class="line"># everysec：表示每秒同步一次（折衷，默认值）</span><br><span class="line"> </span><br><span class="line">appendfsync everysec</span><br></pre></td></tr></table></figure></li><li><p>启动服务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo redis-server /usr/local/etc/redis.conf</span><br></pre></td></tr></table></figure></li><li><p>查看日志</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f /usr/local/redis-x.x.x/log-redis.log</span><br></pre></td></tr></table></figure></li><li><p>关闭服务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli shutdown</span><br></pre></td></tr></table></figure></li></ul><h4 id="Redis-缓存清理"><a href="#Redis-缓存清理" class="headerlink" title="Redis 缓存清理"></a>Redis 缓存清理</h4><p>准备工作：启动 redis 后才可以执行后面内容（sudo redis-server /usr/local/etc/redis.conf）</p><ol><li><p>访问 redis 根目录 cd /usr/local/redis-x.x.x</p></li><li><p>登录 redis：redis-cli -h 127.0.0.1 -p 6379</p></li><li><p>查看所有 key 值：keys *</p></li><li><p>删除指定索引的值：del key</p></li><li><p>清空整个 Redis 服务器的数据：flushall </p></li><li><p>清空当前库中的所有 key：flushdb </p></li></ol><h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><p><a href="https://blog.csdn.net/qq_38728790/article/details/82703308" target="_blank" rel="noopener">https://blog.csdn.net/qq_38728790/article/details/82703308</a></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>Redis 官网 <a href="http://redis.io/" target="_blank" rel="noopener">http://redis.io/</a></p></blockquote><h4 id="Redis-简介"><a href="#Redis-简介" class="headerlink" title="Redis 简介"></a>Redis 简介</h4><blockquote><p>Redis 是用 C 语言开发的一个高性能键值对数据库，可用于数据缓存，主要用于处理大量数据的高访问负载。</p></blockquote><h4 id="Mac-安装-Redis"><a href="#Mac-安装-Redis" class="headerlink" title="Mac 安装 Redis"></a>Mac 安装 Redis</h4><ul><li>下载 Redis，下载地址：<a href="http://download.redis.io/releases/" target="_blank" rel="noopener">http://download.redis.io/releases/</a></li><li><p>解压 Redis 安装文件到 /usr/local 目录下，并执行如下命令即可</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 编译测试</span><br><span class="line">sudo make test</span><br><span class="line"></span><br><span class="line"># 安装</span><br><span class="line">sudo make install</span><br><span class="line"></span><br><span class="line"># 启动 redis 服务器</span><br><span class="line">redis-server</span><br></pre></td></tr></table></figure></li><li><p>至此安装完毕<br><img src="/images/pasted-22.png" alt="图一"></p></li></ul><h4 id="Redis-配置"><a href="#Redis-配置" class="headerlink" title="Redis 配置"></a>Redis 配置</h4><ul><li><p>在 /usr/local 目录创建 bin, etc 两个文件夹，在 redis 目录下创建 db 文件夹</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/local/bin</span><br><span class="line">sudo mkdir /usr/local/etc</span><br><span class="line">sudo mkdir /usr/local/redis-xxx/db</span><br></pre></td></tr></table></figure></li><li><p>将 /usr/local/redis-x.x.x/src 目录下的 mkreleasehdr.sh, redis-benchmark, redis-check-rdb, redis-cli, redis server 拷贝至 /usr/local/bin 目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/local/redis-x.x.x/src/mkreleasehdr.sh /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-benchmark /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-check-rdb /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-cli /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-server /usr/local/bin</span><br></pre></td></tr></table></figure></li><li><p>将 redis.conf 拷贝至目录 etc</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/local/redis-x.x.x/redis.conf /usr/local/etc</span><br></pre></td></tr></table></figure></li><li><p>修改 redis.conf<br>进入 redis/etc 目录，修改 redis.conf，如下内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"># 修改为守护模式</span><br><span class="line"> </span><br><span class="line">daemonize yes</span><br><span class="line"></span><br><span class="line"># 设置进程锁文件</span><br><span class="line"> </span><br><span class="line">pidfile /usr/local/redis/redis.pid</span><br><span class="line"></span><br><span class="line"># 端口</span><br><span class="line"> </span><br><span class="line">port 6379</span><br><span class="line"></span><br><span class="line"># 客户端超时时间</span><br><span class="line"></span><br><span class="line">timeout 300</span><br><span class="line"></span><br><span class="line"># 日志级别</span><br><span class="line"> </span><br><span class="line">loglevel debug</span><br><span class="line"></span><br><span class="line"># 日志文件位置</span><br><span class="line"> </span><br><span class="line">logfile /usr/local/redis/log-redis.log</span><br><span class="line"></span><br><span class="line"># 设置数据库的数量，默认数据库为0，可以使用 SELECT &lt;dbid&gt; 命令在连接上指定数据库id</span><br><span class="line"> </span><br><span class="line">databases 8</span><br><span class="line"></span><br><span class="line"># 指定在多长时间内，有多少次更新操作，就将数据同步到数据文件，可以多个条件配合</span><br><span class="line"># save &lt;seconds&gt; &lt;changes&gt;</span><br><span class="line"># Redis 默认配置文件中提供了三个条件：</span><br><span class="line"> </span><br><span class="line">save 900 1</span><br><span class="line">save 300 10</span><br><span class="line">save 60 10000</span><br><span class="line"></span><br><span class="line"># 指定存储至本地数据库时是否压缩数据，默认为 yes，Redis 采用 LZF 压缩，如果为了节省 CPU 时间，可以关闭该#选项，但会导致数据库文件变的巨大</span><br><span class="line"></span><br><span class="line">rdbcompression yes</span><br><span class="line"></span><br><span class="line"># 指定本地数据库文件名</span><br><span class="line"> </span><br><span class="line">dbfilename dump.rdb</span><br><span class="line"> </span><br><span class="line"># 指定本地数据库路径</span><br><span class="line"> </span><br><span class="line">dir /usr/local/redis/db/</span><br><span class="line"></span><br><span class="line"># 指定是否在每次更新操作后进行日志记录，Redis在默认情况下是异步的把数据写入磁盘，如果不开启，可能会在断电时导致一段时间内的数据丢失。</span><br><span class="line"># 因为 redis本身同步数据文件是按上面save条件来同步的，所以有的数据会在一段时间内只存在于内存中</span><br><span class="line"> </span><br><span class="line">appendonly no</span><br><span class="line"></span><br><span class="line"># 指定更新日志条件，共有3个可选值：</span><br><span class="line"># no：表示等操作系统进行数据缓存同步到磁盘（快）</span><br><span class="line"># always：表示每次更新操作后手动调用 fsync() 将数据写到磁盘（慢，安全）</span><br><span class="line"># everysec：表示每秒同步一次（折衷，默认值）</span><br><span class="line"> </span><br><span class="line">appendfsync everysec</span><br></pre></td></tr></table></figure></li><li><p>启动服务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo redis-server /usr/local/etc/redis.conf</span><br></pre></td></tr></table></figure></li><li><p>查看日志</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f /usr/local/redis-x.x.x/log-redis.log</span><br></pre></td></tr></table></figure></li><li><p>关闭服务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli shutdown</span><br></pre></td></tr></table></figure></li></ul><h4 id="Redis-缓存清理"><a href="#Redis-缓存清理" class="headerlink" title="Redis 缓存清理"></a>Redis 缓存清理</h4><p>准备工作：启动 redis 后才可以执行后面内容（sudo redis-server /usr/local/etc/redis.conf）</p><ol><li><p>访问 redis 根目录 cd /usr/local/redis-x.x.x</p></li><li><p>登录 redis：redis-cli -h 127.0.0.1 -p 6379</p></li><li><p>查看所有 key 值：keys *</p></li><li><p>删除指定索引的值：del key</p></li><li><p>清空整个 Redis 服务器的数据：flushall </p></li><li><p>清空当前库中的所有 key：flushdb </p></li></ol><h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><blockquote><p><a href="https://blog.csdn.net/qq_38728790/article/details/82703308" target="_blank" rel="noopener">https://blog.csdn.net/qq_38728790/article/details/82703308</a></p></blockquote>]]></content>
     
     <summary type="html">
     
@@ -57,7 +204,7 @@
         &lt;blockquote&gt;
 &lt;p&gt;Redis 官网 &lt;a href=&quot;http://redis.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://redis.io/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&quot;Mac-安装-Red
+&lt;h4 id=&quot;Redis-简介&quot;&gt;
       
     
     </summary>
@@ -365,9 +512,9 @@
     <link href="https://zhangshengjian.github.io/2019/06/09/Mac-Pro-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>https://zhangshengjian.github.io/2019/06/09/Mac-Pro-快捷键/</id>
     <published>2019-06-09T12:33:09.000Z</published>
-    <updated>2019-07-12T15:10:14.979Z</updated>
+    <updated>2019-07-13T15:19:22.301Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>Mac Pro 常用快捷键</p></blockquote><table><thead><tr><th>快捷键</th><th>解释</th></tr></thead><tbody><tr><td>command + F3 / fn + F11</td><td>显示桌面</td></tr><tr><td>shift + command + G</td><td>打开某一指定目录</td></tr></tbody></table><blockquote><p>Mac Pro 终端常用命令</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>netstat -na &#124; grep 8080</td><td>查看端口状态</td></tr><tr><td>ssh -p port user@host</td><td>远程登录 Linux 服务器</td></tr><tr><td>sudo lsof -i:8080</td><td>查看端口占用进程</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>Mac Pro 常用快捷键</p></blockquote><table><thead><tr><th>快捷键</th><th>解释</th></tr></thead><tbody><tr><td>command + F3 / fn + F11</td><td>显示桌面</td></tr><tr><td>shift + command + G</td><td>打开某一指定目录</td></tr></tbody></table><blockquote><p>Mac Pro 终端常用命令</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>netstat -na &#124; grep 8080</td><td>查看端口状态</td></tr><tr><td>ssh -p port user@host</td><td>远程登录 Linux 服务器</td></tr><tr><td>sudo lsof -i:8080</td><td>查看端口占用进程</td></tr><tr><td>open -e .bash_profile</td><td>打开文件编辑</td></tr></tbody></table>]]></content>
     
     <summary type="html">
     
@@ -448,138 +595,6 @@
     
     
       <category term="Lock" scheme="https://zhangshengjian.github.io/tags/Lock/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL for update</title>
-    <link href="https://zhangshengjian.github.io/2019/05/29/SQL-for-update/"/>
-    <id>https://zhangshengjian.github.io/2019/05/29/SQL-for-update/</id>
-    <published>2019-05-29T13:59:38.000Z</published>
-    <updated>2019-06-02T13:43:27.827Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>Oracle 行级共享锁</p></blockquote><p>行级共享锁通常是 SELECT … FROM FOR UPDATE 语句来添加的，该方法也是手工锁定某些记录的主要方法，比如，当我们在查询某些记录的过程中，不希望其他用户对查询的记录进行更新操作，则可以发出这样的语句。当数据使用完毕以后，直接发出 ROLLBACK 命令将锁定解除（如果我们查询到了并且修改了，则 COMMIT 后就可以释放锁）。</p><p><b>SELECT … FOR UPDATE</b></p><p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM goods WHERE goods_code =&apos;001&apos; FOR UPDATE;</span><br></pre></td></tr></table></figure></p><p>当 SELECT 语句中使用了 FOR UPDATE，如果当前 SELECT 发现自己的结果集中有一条或者多条数据正在被修改，例如有其他的语句提前 FOR UPDATE，那么再执行此语句就会一直等待；</p><p>此时执行：<br>UPDATE/DELETE 等语句都出现等待。只有对应的占用锁的数据被提交 COMMIT（或者 ROLLBACK）时才可以进行新的 FOR UPDATE 上锁或者进行 UPDATE/DELETE。</p><p><b>SELECT … FOR UPDATE NOWAIT</b></p><p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM goods WHERE goods_code =&apos;001&apos; FOR UPDATE NOWAIT;</span><br></pre></td></tr></table></figure></p><p>FOR UPDATE NOWAIT 和 FOR UPDATE 都会对查询到的当前结果集进行加锁。区别是 FOR UPDATE NOWAIT 发现自己要加锁的结果集正在被其他操作修改（已经被加锁），则直接反馈资源占用，不会像 FOR UPDATE 一样等待执行。</p><p><b>SELECT … FOR UPDATE WAIT</b></p><p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM goods WHERE goods_code =&apos;001&apos; FOR UPDATE WAIT;</span><br></pre></td></tr></table></figure></p><p>与 FOR UPDATE NOWAIT 的区别是 FOR UPDATE WAIT 可配置等待时间，单位秒。当过了这个时间，被加锁资源还未被释放，则和 FOR UPDATE NOWAIT 一样直接反馈资源占用，否则执行此语句。</p><p><b>SELECT … FOR UPDATE SKIP LOCKED</b></p><p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM goods FOR UPDATE SKIP LOCKED;</span><br></pre></td></tr></table></figure></p><p>跳过加锁行，对满足条件的其他行进行加锁。</p><p><b>SELECT … INNER JOIN … FOR UPDATE</b></p><p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM stat_dic_goods sg INNER JOIN goods g ON sg.goods_code = g.goods_code WHERE sg.goods_code = &apos;001&apos; FOR UPDATE;</span><br></pre></td></tr></table></figure></p><p>关联的表都加锁。</p><p><b>SELECT … INNER JOIN … FOR UPDATE OF …</b></p><p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM stat_dic_goods sg INNER JOIN goods g ON sg.goods_code = g.goods_code WHERE sg.goods_code = &apos;001&apos; FOR UPDATE OF sg.goods_code;</span><br></pre></td></tr></table></figure></p><p>对关联的表中的某一张表进行加锁。</p><hr><blockquote><p>Oracle 共享锁</p></blockquote><p><b>LOCK TABLE stat_dic_goods IN SHARE MODE</b><br>执行完 lock 语句再执行 update 语句就会出现等待中，因为 lock 语句已经将这个表锁了，此时只允许读取不允许修改。通过 lock table in share mode 命令添加该S锁。在该锁定模式下，不允许任何用户更新表。但是允许其他用户发出 select … from for update 命令对表添加 RS 锁。Oracle 只有表级别的共享锁没有行级别的共享锁，行级别的是排他锁，多个用户可以同时对同一个表加共享锁。</p><hr><blockquote><p>Oracle 排他锁</p></blockquote><p><b>LOCK TABLE stat_dic_goods IN EXCLUSIVE MODE</b><br>同一张表不能同时执行共享锁和排他锁。通过 lock table in exclusive mode 命令添加 X 锁。在该锁定模式下，其他用户不能对表进行任何的 DML 和 DDL 操作，该表上只能进行查询。</p><hr><blockquote><p>Oracle 行级排他锁</p></blockquote><p><b>LOCK TABLE stat_dic_goods IN ROW EXCLUSIVE MODE</b><br>当我们进行 DML 时会自动在被更新的表上添加 RX 锁，或者也可以通过执行 lock 命令显式的在表上添加RX 锁。在该锁定模式下，允许其他的事务通过 DML 语句修改相同表里的其他数据行，或通过 lock 命令对相同表添加 RX 锁定，但是不允许其他事务对相同的表添加排他锁（X 锁）。</p><hr><blockquote><p>Oracle 共享行级排他锁</p></blockquote><p><b>LOCK TABLE stat_dic_goods IN SHARE ROW EXCLUSIVE MODE</b><br>通过 lock table in share row exclusive mode 命令添加 SRX 锁。该锁定模式比行级排他锁和共享锁的级别都要高，这时不能对相同的表进行DML操作，也不能添加共享锁。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;Oracle 行级共享锁&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;行级共享锁通常是 SELECT … FROM FOR UPDATE 语句来添加的，该方法也是手工锁定某些记录的主要方法，比如，当我们在查询某些记录的过程中，不希望其他用户对查询的记
-      
-    
-    </summary>
-    
-      <category term="SQL" scheme="https://zhangshengjian.github.io/categories/SQL/"/>
-    
-    
-      <category term="SQL" scheme="https://zhangshengjian.github.io/tags/SQL/"/>
-    
-      <category term="FOR UPDATE" scheme="https://zhangshengjian.github.io/tags/FOR-UPDATE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL 常用命令</title>
-    <link href="https://zhangshengjian.github.io/2019/05/24/MySQL-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://zhangshengjian.github.io/2019/05/24/MySQL-常用命令/</id>
-    <published>2019-05-24T13:45:50.000Z</published>
-    <updated>2019-05-24T13:49:09.695Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>常用 命令篇</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>mysql -u root -p -P port</td><td>登录 MySQL 数据库</td></tr><tr><td>mysql -h ip_address -P 3306 -u root -p123456</td><td>远程登录数据库（端口”3306”，用户名为 “root”，密码”123456”）</td></tr><tr><td>show databases</td><td>查看数据库</td></tr><tr><td>use database_name</td><td>使用数据库</td></tr><tr><td>show tables</td><td>查看都有哪些表</td></tr><tr><td>desc table_name</td><td>查看表结构</td></tr><tr><td>drop table table_name</td><td>删除表</td></tr><tr><td>drop database database_name</td><td>删除数据库</td></tr><tr><td>show create table table_name</td><td>显示建表语句</td></tr><tr><td>show create schema database_name</td><td>显示创建数据库语句</td></tr><tr><td>create schema <code>new_schema</code> default character set utf8;</td><td>创建数据库</td></tr></tbody></table><blockquote><p>数据导入导出 命令篇</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>source db.sql</td><td>执行 .sql 脚本</td></tr><tr><td>mysqldump -h host -uroot -p database_name &gt; dump.sql</td><td>dump 整个数据库的表结构和数据</td></tr><tr><td>mysqldump -h host -uroot -p database_name table_name &gt; dump.sql</td><td>dump 单个数据库表结构和数据</td></tr><tr><td>mysqldump -h host -uroot -p  -d database_name &gt; dump.sql</td><td>dump 整个数据库的表结构</td></tr><tr><td>mysqldump -h host -uroot -p -d database_name table_name &gt; dump.sql</td><td>dump 单个数据库表结构</td></tr><tr><td>mysqldump -h host -uroot -p -t database_name &gt; dump.sql</td><td>dump 整个数据库的数据，不添加 create table</td></tr><tr><td>mysql -uuser_name -ppassword -hhost -P3306 -D db_name –default-character-set=utf8 -e “select * from custom where com_uid = ‘001’” &gt; test.csv</td><td>将数据库中的数据导出到 excel 文件中 user_name = 数据库用户名 password = 数据库密码 host = 主机名称 db_name = 数据库名称</td></tr><tr><td>mysqldump -uuser_name -ppassword -hhost -P 3306 db_name table_name –where=”com_uid=’001’” &gt; /Users/dump.sql</td><td>将数据库中的数据 dump 到 sql 文件中 user_name = 数据库用户名 password = 数据库密码 host = 主机名称 db_name = 数据库名称 table_name = 表名</td></tr></tbody></table><blockquote><p>索引 命令篇</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>show index from table_name</td><td>查看表索引</td></tr><tr><td>repair table table_name quick</td><td>重建索引命令</td></tr><tr><td>alter table table_name add index index_name (column list)</td><td>创建联合索引</td></tr><tr><td>alter table table_name add unique index_name (column list)</td><td>创建普通索引</td></tr><tr><td>alter table table_name add primary key index_name (column list)</td><td>创建主键索引</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;常用 命令篇&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;命令&lt;/th&gt;
-&lt;th&gt;解释&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;mysql -u root -p -P po
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="https://zhangshengjian.github.io/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="https://zhangshengjian.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>消息队列简介</title>
-    <link href="https://zhangshengjian.github.io/2019/05/22/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E7%AE%80%E4%BB%8B/"/>
-    <id>https://zhangshengjian.github.io/2019/05/22/消息队列简介/</id>
-    <published>2019-05-22T10:45:50.000Z</published>
-    <updated>2019-06-10T11:31:34.730Z</updated>
-    
-    <content type="html"><![CDATA[<p><b>为什么使用消息队列</b><br>消息队列常见的使用场景吧，其实场景有很多，但是比较核心的有3个：<b>解耦、异步、削峰</b>。</p><p><b>解耦</b><br>看这么个场景。A 系统发送数据到 BCD 三个系统，通过接口调用发送。如果 E 系统也要这个数据呢？那如果 C 系统现在不需要了呢？A 系统负责人几乎崩溃……<br><img src="/images/pasted-4.png" alt="图一"><br>在这个场景中，A 系统跟其它各种乱七八糟的系统严重耦合，A 系统产生一条比较关键的数据，很多系统都需要 A 系统将这个数据发送过来。A 系统要时时刻刻考虑 BCDE 四个系统如果挂了该咋办？要不要重发，要不要把消息存起来？头发都白了啊！</p><p>如果使用 MQ，A 系统产生一条数据，发送到 MQ 里面去，哪个系统需要数据自己去 MQ 里面消费。如果新系统需要数据，直接从 MQ 里消费即可；如果某个系统不需要这条数据了，就取消对 MQ 消息的消费即可。这样下来，A 系统压根儿不需要去考虑要给谁发送数据，不需要维护这个代码，也不需要考虑人家是否调用成功、失败超时等情况。</p><p><img src="/images/pasted-3.png" alt="图二"><br><b>总结</b>：通过一个 MQ，Pub/Sub 发布订阅消息这么一个模型，A 系统就跟其它系统彻底解耦了。<br>需要考虑一下负责的系统中是否有类似的场景，就是一个系统或者一个模块，调用了多个系统或者模块，互相之间的调用很复杂，维护起来很麻烦。但是其实这个调用是不需要直接同步调用接口的，如果用 MQ 给它异步化解耦，也是可以的，就需要去考虑在项目里，是不是可以运用这个 MQ 去进行系统的解耦。</p><p><b>异步</b><br>再来看一个场景，A 系统接收一个请求，需要在自己本地写库，还需要在 BCD 三个系统写库，自己本地写库要 3ms，BCD 三个系统分别写库要 300ms、450ms、200ms。最终请求总延时是 3 + 300 + 450 + 200 = 953ms，接近 1s，用户感觉搞个什么东西，慢死了慢死了。用户通过浏览器发起请求，等待个 1s，这几乎是不可接受的。</p><p><img src="/images/pasted-5.png" alt="图三"><br>一般互联网类的企业，对于用户直接的操作，一般要求是每个请求都必须在 200 ms 以内完成，对用户几乎是无感知的。如果使用 MQ，那么 A 系统连续发送 3 条消息到 MQ 队列中，假如耗时 5ms，A 系统从接受一个请求到返回响应给用户，总时长是 3 + 5 = 8ms，对于用户而言，其实感觉上就是点个按钮，8ms 以后就直接返回了，爽！网站做得真好，真快！</p><p><img src="/images/pasted-6.png" alt="图四"></p><p><b>削峰</b><br>每天 0:00 到 12:00，A 系统风平浪静，每秒并发请求数量就 50 个。结果每次一到 12:00 ~ 13:00 ，每秒并发请求数量突然会暴增到 5k+ 条。但是系统是直接基于 MySQL 的，大量的请求涌入 MySQL，每秒钟对 MySQL 执行约 5k 条 SQL。</p><p>一般的 MySQL，扛到每秒 2k 个请求就差不多了，如果每秒请求到 5k 的话，可能就直接把 MySQL 给打死了，导致系统崩溃，用户也就没法再使用系统了。</p><p>但是高峰期一过，到了下午的时候，就成了低峰期，可能也就 1w 的用户同时在网站上操作，每秒中的请求数量可能也就 50 个请求，对整个系统几乎没有任何的压力。</p><p><img src="/images/pasted-7.png" alt="图五"><br>如果使用 MQ，每秒 5k 个请求写入 MQ，A 系统每秒钟最多处理 2k 个请求，因为 MySQL 每秒钟最多处理 2k 个。A 系统从 MQ 中慢慢拉取请求，每秒钟就拉取 2k 个请求，不要超过自己每秒能处理的最大请求数量就 ok，这样下来，哪怕是高峰期的时候，A 系统也绝对不会挂掉。而 MQ 每秒钟 5k 个请求进来，就 2k 个请求出去，结果就导致在中午高峰期（1 个小时），可能有几十万甚至几百万的请求积压在 MQ 中。</p><p><img src="/images/pasted-8.png" alt="图六"></p><p>这个短暂的高峰期积压是 ok 的，因为高峰期过了之后，每秒钟就 50 个请求进 MQ，但是 A 系统依然会按照每秒 2k 个请求的速度在处理。所以说，只要高峰期一过，A 系统就会快速将积压的消息给解决掉。</p><hr><p><b>消息队列有什么优缺点</b></p><p><b>优点</b></p><ul><li>解耦</li><li>异步</li><li>削峰</li><li>横向扩展</li><li>安全可靠</li><li>顺序保证（例如 Kafka）</li><li>更多。。。</li></ul><p><b>缺点</b></p><ul><li><p>系统可用性降低<br>系统引入的外部依赖越多，越容易挂掉。本来就是 A 系统调用 BCD 三个系统的接口就好了，人 ABCD 四个系统好好的，没啥问题，偏加个 MQ 进来，万一 MQ 挂了咋整，MQ 一挂，整套系统崩溃的，不就完了？如何保证消息队列的高可用，可以点击这里查看。</p></li><li><p>系统复杂度提高<br>硬生生加个 MQ 进来，怎么保证消息没有重复消费？怎么处理消息丢失的情况？怎么保证消息传递的顺序性？头大头大，问题一大堆，痛苦不已。</p></li><li><p>一致性问题<br>A 系统处理完了直接返回成功了，人都以为这个请求就成功了；但是问题是，要是 BCD 三个系统那里，BD 两个系统写库成功了，结果 C 系统写库失败了，咋整？这数据就不一致了。</p></li></ul><p>所以消息队列实际是一种非常复杂的架构，引入它有很多好处，但是也得针对它带来的坏处做各种额外的技术方案和架构来规避掉，做好之后会发现，妈呀，系统复杂度提升了一个数量级，也许是复杂了 10 倍。但是关键时刻，用，还是得用的。</p><hr><p><b>Kafka、ActiveMQ、RabbitMQ、RocketMQ 有什么优缺点？</b></p><table><thead><tr><th>特性</th><th>ActiveMQ</th><th>RabbitMQ</th><th>RocketMQ</th><th>Kafka</th></tr></thead><tbody><tr><td>单机吞吐量</td><td>万级，比 RocketMQ、Kafka 低一个数量级</td><td>同 ActiveMQ</td><td>10 万级，支撑高吞吐</td><td>10 万级，高吞吐，一般配合大数据类的系统来进行实时数据计算、日志采集等场景</td></tr><tr><td>topic 数量对吞吐量的影响</td><td></td><td></td><td>topic 可以达到几百/几千的级别，吞吐量会有较小幅度的下降，这是 RocketMQ 的一大优势，在同等机器下，可以支撑大量的 topic</td><td>topic 从几十到几百个时候，吞吐量会大幅度下降，在同等机器下，Kafka 尽量保证 topic 数量不要过多，如果要支撑大规模的 topic，需要增加更多的机器资源</td></tr><tr><td>时效性</td><td>ms 级</td><td>微秒级，这是 RabbitMQ 的一大特点，延迟最低</td><td>ms 级</td><td>延迟在 ms 级以内</td></tr><tr><td>可用性</td><td>高，基于主从架构实现高可用</td><td>同 ActiveMQ</td><td>非常高，分布式架构</td><td>非常高，分布式，一个数据多个副本，少数机器宕机，不会丢失数据，不会导致不可用</td></tr><tr><td>消息可靠性</td><td>有较低的概率丢失数据</td><td>基本不丢</td><td>经过参数优化配置，可以做到 0 丢失</td><td>同 RocketMQ</td></tr><tr><td>功能支持</td><td>MQ 领域的功能极其完备</td><td>基于 erlang 开发，并发能力很强，性能极好，延时很低</td><td>MQ 功能较为完善，还是分布式的，扩展性好</td><td>功能较为简单，主要支持简单的 MQ 功能，在大数据领域的实时计算以及日志采集被大规模使用</td></tr></tbody></table><p>综上，各种对比之后，有如下建议：</p><p>一般的业务系统要引入 MQ，最早大家都用 ActiveMQ，但是现在确实大家用的不多了，没经过大规模吞吐量场景的验证，社区也不是很活跃，所以大家还是算了吧，我个人不推荐用这个了；</p><p>后来大家开始用 RabbitMQ，但是确实 erlang 语言阻止了大量的 Java 工程师去深入研究和掌控它，对公司而言，几乎处于不可控的状态，但是确实人家是开源的，比较稳定的支持，活跃度也高；</p><p>不过现在确实越来越多的公司会去用 RocketMQ，确实很不错，毕竟是阿里出品，但社区可能有突然黄掉的风险（目前 RocketMQ 已捐给 Apache，但 GitHub 上的活跃度其实不算高）对自己公司技术实力有绝对自信的，推荐用 RocketMQ，否则回去老老实实用 RabbitMQ 吧，人家有活跃的开源社区，绝对不会黄。</p><p>所以<b>中小型公司</b>，技术实力较为一般，技术挑战不是特别高，用 RabbitMQ 是不错的选择；<b>大型公司</b>，基础架构研发实力较强，用 RocketMQ 是很好的选择。</p><p>如果是<b>大数据领域</b>的实时计算、日志采集等场景，用 Kafka 是业内标准的，绝对没问题，社区活跃度很高，绝对不会黄，何况几乎是全世界这个领域的事实性规范。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;b&gt;为什么使用消息队列&lt;/b&gt;&lt;br&gt;消息队列常见的使用场景吧，其实场景有很多，但是比较核心的有3个：&lt;b&gt;解耦、异步、削峰&lt;/b&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;解耦&lt;/b&gt;&lt;br&gt;看这么个场景。A 系统发送数据到 BCD 三个系统，通过接口调用发送。如果 E 系统也要这个数据
-      
-    
-    </summary>
-    
-      <category term="MQ" scheme="https://zhangshengjian.github.io/categories/MQ/"/>
-    
-    
-      <category term="Kafka" scheme="https://zhangshengjian.github.io/tags/Kafka/"/>
-    
-      <category term="RabbitMQ" scheme="https://zhangshengjian.github.io/tags/RabbitMQ/"/>
-    
-      <category term="ActiveMQ" scheme="https://zhangshengjian.github.io/tags/ActiveMQ/"/>
-    
-      <category term="MQ" scheme="https://zhangshengjian.github.io/tags/MQ/"/>
-    
-      <category term="RocketMQ" scheme="https://zhangshengjian.github.io/tags/RocketMQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 常用命令</title>
-    <link href="https://zhangshengjian.github.io/2019/05/20/Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://zhangshengjian.github.io/2019/05/20/Linux-常用命令/</id>
-    <published>2019-05-20T15:00:15.000Z</published>
-    <updated>2019-05-21T10:48:49.233Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>Linux 命令概览</p></blockquote><p><img src="/images/pasted-0.png" alt="Linux 命令概览"></p><blockquote><p>vi 命令篇</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>:q</td><td>不保存文件，退出 vi 模式</td></tr><tr><td>:wq</td><td>保存文件并退出 vi 模式</td></tr><tr><td>:w</td><td>保存文件但不退出 vi 模式</td></tr><tr><td>:w!</td><td>强制保存文件并不退出 vi 模式</td></tr><tr><td>:wq!</td><td>强制保存文件并退出 vi 模式</td></tr><tr><td>:w file</td><td>修改保存到 file 中并不退出 vi 模式</td></tr><tr><td>:q!</td><td>不保存文件并强制退出 vi 模式</td></tr><tr><td>:e!</td><td>放弃所有修改并从上次保存文件开始再编辑</td></tr><tr><td>GG == shift + g</td><td>编辑光标跳转到最后一行</td></tr><tr><td>gg</td><td>编辑光标跳转到首行</td></tr><tr><td>shift + 6 =&gt; ^</td><td>光标移到行首</td></tr><tr><td>shift + 4 =&gt; $</td><td>光标移到行尾</td></tr><tr><td>DD</td><td>删除当前行</td></tr><tr><td>dG</td><td>删除当前光标后面的全部内容</td></tr><tr><td>sudo -u root vi /etc/profile</td><td>以管理员模式强制编辑文件</td></tr></tbody></table><blockquote><p>tar 命令篇</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>tar -czf demo.tar.gz <em>.</em></td><td>压缩文件</td></tr><tr><td>tar -zvcf demo.tar.gz <em>.</em></td><td>压缩文件</td></tr><tr><td>tar -zxvf demo.tar.gz</td><td>解压文件</td></tr><tr><td>tar -zxvpf demo.tar.gz</td><td>解压文件为 .tar.gz</td></tr><tr><td>tar -jxvpf demo.tar.bz2</td><td>解压文件为 .tar.bz2</td></tr></tbody></table><blockquote><p>du 命令篇</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>du -h</td><td>查看内存使用情况</td></tr><tr><td>du -sh .</td><td>对当前目录下所有的目录和文件的大小进行汇总, -s 表示汇总, -h 表示以 KB, MB, GB, TB 格式进行人性化显示</td></tr><tr><td>du -sh *</td><td>对当前目录下每一个目录和文件的大小分别进行汇总</td></tr><tr><td>du -sh apps</td><td>对指定的目录的大小进行汇总</td></tr><tr><td>du -sh * &#124; grep [M]</td><td>对当前目录下所有的目录和文件分别进行汇总,并使用 “grep [M]” 筛选出所有大小为 M(兆) 级别的目录和文件</td></tr><tr><td>du -sh * &#124; grep [G]</td><td>筛选出大小为 GB 级别的目录和文件</td></tr><tr><td>du -sh * &#124; grep [MG]</td><td>筛选出大小为 MB 和 GB 级别的目录和文件</td></tr><tr><td>du -sh * &#124; grep [MG] &#124; sort -nr</td><td>筛选出大小为 MB 和 GB 级别的目录和文件，并降序排序</td></tr></tbody></table><blockquote><p>ls 命令篇</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>ls -lR &#124; grep “^-“ &#124; wc -l</td><td>统计当前文件夹下文件的个数，包括子文件夹里的</td></tr><tr><td>ls -lR &#124; grep “^d” &#124; wc -l</td><td>统计文件夹下目录的个数，包括子文件夹里的</td></tr><tr><td>ls -l &#124; grep “^-“ &#124; wc -l</td><td>统计当前文件夹下文件的个数</td></tr><tr><td>ls -l &#124; grep “^d” &#124; wc -l</td><td>统计当前文件夹下目录的个数</td></tr><tr><td>ls -ah</td><td>查看当前目录文件，包含隐藏文件</td></tr></tbody></table><blockquote><p>find 命令篇</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>find . -name “*.war”</td><td>查找目录下以 .war 结尾的相关文件</td></tr><tr><td>find . -name “config.xml”</td><td>查找目录下的 config.xml 文件</td></tr></tbody></table><blockquote><p>其他常用 命令篇</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>scp root@ip_address:/home/demo.tar.gz demo.tar.gz</td><td>服务器传输文件</td></tr><tr><td>ps -fC java</td><td>查看进程详细信息</td></tr><tr><td>ll -t</td><td>按时间顺序列出文件</td></tr><tr><td>ll &#124; grep .sql -c</td><td>查看以某个后缀名结尾的文件个数</td></tr><tr><td>uname -a 或者 cat /proc/version</td><td>查看系统内核版本号及系统名称</td></tr><tr><td>which java</td><td>查看 jdk 路径</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;Linux 命令概览&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/images/pasted-0.png&quot; alt=&quot;Linux 命令概览&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;vi 命令篇&lt;/p&gt;
-&lt;/blockquot
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://zhangshengjian.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="https://zhangshengjian.github.io/tags/Linux/"/>
     
   </entry>
   
