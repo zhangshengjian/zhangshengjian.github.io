@@ -138,7 +138,7 @@
 <meta property="og:site_name" content="坚持到放弃">
 <meta property="og:description" content="数据库操作篇     命令 解释     mysql -u &amp;lt;username&amp;gt; -p -P &amp;lt;port&amp;gt; 登录 MySQL 数据库   mysql -h &amp;lt;ip_address&amp;gt; -P &amp;lt;port&amp;gt; -u &amp;lt;username&amp;gt; -p&amp;lt;password&amp;gt; 远程登录数据库   show databases 查看所有数据库">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-17T14:46:09.277Z">
+<meta property="og:updated_time" content="2019-07-17T15:54:02.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL 常用命令">
 <meta name="twitter:description" content="数据库操作篇     命令 解释     mysql -u &amp;lt;username&amp;gt; -p -P &amp;lt;port&amp;gt; 登录 MySQL 数据库   mysql -h &amp;lt;ip_address&amp;gt; -P &amp;lt;port&amp;gt; -u &amp;lt;username&amp;gt; -p&amp;lt;password&amp;gt; 远程登录数据库   show databases 查看所有数据库">
@@ -515,7 +515,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-17 22:46:09" itemprop="dateModified" datetime="2019-07-17T22:46:09+08:00">2019-07-17</time>
+                <time title="修改时间：2019-07-17 23:54:02" itemprop="dateModified" datetime="2019-07-17T23:54:02+08:00">2019-07-17</time>
               
             
           </span>
@@ -669,7 +669,7 @@
 </tbody>
 </table>
 <blockquote>
-<p>索引篇</p>
+<p>索引操作篇</p>
 </blockquote>
 <table>
 <thead>
@@ -699,10 +699,182 @@
 <td>alter table &lt;table_name&gt; add primary key &lt;index_name&gt; (column list)</td>
 <td>创建主键索引</td>
 </tr>
+<tr>
+<td>explain + &lt;sql&gt;</td>
+<td>分析 sql 是否语句是否走上索引</td>
+</tr>
 </tbody>
 </table>
 <blockquote>
-<p>数据导入导出篇</p>
+<p>数据操纵语句 DML 篇</p>
+</blockquote>
+<p>插入记录</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>insert into &lt;table_name&gt; (&lt;column_name1&gt;,&lt;column_name2&gt;,…) values (&lt;value1&gt;,&lt;value2&gt;,…)</td>
+<td>指定名称插入</td>
+</tr>
+<tr>
+<td>insert into &lt;table_name&gt; values (&lt;value1&gt;,&lt;value2&gt;,…)</td>
+<td>不指定名称插入</td>
+</tr>
+<tr>
+<td>insert into &lt;table_name&gt; values(&lt;value1&gt;,&lt;value11&gt;…),(&lt;value2&gt;,&lt;value22&gt;…)</td>
+<td>批量插入数据</td>
+</tr>
+</tbody>
+</table>
+<p>修改记录</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>update &lt;table_name&gt; set &lt;column_name&gt; = &lt;value&gt;, &lt;column_name&gt; = &lt;value&gt;,… where &lt;column_name&gt;=&lt;value&gt; …</td>
+<td>修改记录</td>
+</tr>
+</tbody>
+</table>
+<p>删除记录</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delete from &lt;table_name&gt; where &lt;column_name&gt; = &lt;value&gt; …</td>
+<td>删除记录</td>
+</tr>
+</tbody>
+</table>
+<p>查询记录</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>select * from &lt;table_name&gt;</td>
+<td>查询所有记录</td>
+</tr>
+<tr>
+<td>select distinct &lt;column_name&gt; from &lt;table_name&gt;</td>
+<td>查询不重复的记录</td>
+</tr>
+<tr>
+<td>select * from &lt;table_name&gt; where &lt;column_name&gt; = &lt;value&gt; and &lt;column_name&gt; &lt; &lt;value&gt;</td>
+<td>条件查询</td>
+</tr>
+<tr>
+<td>select * from &lt;table_name&gt; order by &lt;column_name&gt; desc limit 100</td>
+<td>排序和限制</td>
+</tr>
+<tr>
+<td>select * from &lt;table_name&gt; order by &lt;column_name&gt; desc limit 0,10</td>
+<td>分页查询(查询从第0条记录开始10条)</td>
+</tr>
+<tr>
+<td>select &lt;column_name&gt;,count(1) from &lt;table_name&gt; group by &lt;column_name&gt; having count(1) &gt; 1</td>
+<td>聚合</td>
+</tr>
+<tr>
+<td>select * from &lt;table_name1&gt; t1 left join &lt;table_name2&gt; t2 on t1.&lt;column_name&gt; = t2.&lt;column_name&gt;</td>
+<td>连接查询</td>
+</tr>
+<tr>
+<td>select * from &lt;table_name1&gt; where &lt;column_name&gt; in (select column_name from &lt;table_name2&gt;)</td>
+<td>子查询</td>
+</tr>
+<tr>
+<td>&lt;select-sql&gt; union &lt;select-sql&gt;</td>
+<td>记录联合</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>数据控制语句 DCL 篇</p>
+</blockquote>
+<p>权限相关</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>grant select,insert on test.* to ‘test‘@’localhost’ identified by ‘123’</td>
+<td>授予操作权限(将 test 数据库中所有表的 select 和 insert 权限授予 test 用户)</td>
+</tr>
+<tr>
+<td>show grants for ‘test‘@’localhost’</td>
+<td>查看账号权限</td>
+</tr>
+<tr>
+<td>revoke insert on test.* from ‘test‘@’localhost’</td>
+<td>收回操作权限</td>
+</tr>
+<tr>
+<td>grant all privileges on <em>.</em> to ‘test‘@’localhost’</td>
+<td>授予所有数据库的所有权限</td>
+</tr>
+<tr>
+<td>grant all privileges on <em>.</em> to ‘test‘@’localhost’ with grant option</td>
+<td>授予所有数据库的所有权限(包括 grant)</td>
+</tr>
+<tr>
+<td>grant super,process,file on <em>.</em> to ‘test‘@’localhost’</td>
+<td>授予 SUPER PROCESS FILE 权限（系统权限不能指定数据库）</td>
+</tr>
+<tr>
+<td>grant usage on <em>.</em> to ‘test‘@’localhost’</td>
+<td>只授予登录权限</td>
+</tr>
+</tbody>
+</table>
+<p>帐号相关</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drop user ‘test‘@’localhost’</td>
+<td>删除账号</td>
+</tr>
+<tr>
+<td>set password = password(‘123’)</td>
+<td>修改自己的密码</td>
+</tr>
+<tr>
+<td>set password for ‘test‘@’localhost’ = password(‘123’)</td>
+<td>管理员修改他人密码</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>数据导入导出操作篇</p>
 </blockquote>
 <table>
 <thead>
@@ -747,7 +919,7 @@
 </tbody>
 </table>
 <blockquote>
-<p>其它篇</p>
+<p>其它操作篇</p>
 </blockquote>
 <p>字符集相关</p>
 <table>
@@ -795,10 +967,6 @@
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>参考网址</p>
-</blockquote>
-<p><a href="https://mp.weixin.qq.com/s/M5181QN-weZc8Z-gd9q2Sg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/M5181QN-weZc8Z-gd9q2Sg</a></p>
 
       
     </div>
