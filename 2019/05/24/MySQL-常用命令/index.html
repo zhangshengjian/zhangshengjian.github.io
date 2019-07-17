@@ -130,18 +130,18 @@
 
 
 
-  <meta name="description" content="常用 命令篇     命令 解释     mysql -u root -p -P port 登录 MySQL 数据库   mysql -h ip_address -P 3306 -u root -p123456 远程登录数据库（端口”3306”，用户名为 “root”，密码”123456”）   show databases 查看数据库   use database_name 使用数据库   s">
+  <meta name="description" content="数据库操作篇     命令 解释     mysql -u &amp;lt;username&amp;gt; -p -P &amp;lt;port&amp;gt; 登录 MySQL 数据库   mysql -h &amp;lt;ip_address&amp;gt; -P &amp;lt;port&amp;gt; -u &amp;lt;username&amp;gt; -p&amp;lt;password&amp;gt; 远程登录数据库   show databases 查看所有数据库">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL 常用命令">
 <meta property="og:url" content="https://zhangshengjian.github.io/2019/05/24/MySQL-常用命令/index.html">
 <meta property="og:site_name" content="坚持到放弃">
-<meta property="og:description" content="常用 命令篇     命令 解释     mysql -u root -p -P port 登录 MySQL 数据库   mysql -h ip_address -P 3306 -u root -p123456 远程登录数据库（端口”3306”，用户名为 “root”，密码”123456”）   show databases 查看数据库   use database_name 使用数据库   s">
+<meta property="og:description" content="数据库操作篇     命令 解释     mysql -u &amp;lt;username&amp;gt; -p -P &amp;lt;port&amp;gt; 登录 MySQL 数据库   mysql -h &amp;lt;ip_address&amp;gt; -P &amp;lt;port&amp;gt; -u &amp;lt;username&amp;gt; -p&amp;lt;password&amp;gt; 远程登录数据库   show databases 查看所有数据库">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-24T13:49:09.695Z">
+<meta property="og:updated_time" content="2019-07-17T14:43:46.019Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL 常用命令">
-<meta name="twitter:description" content="常用 命令篇     命令 解释     mysql -u root -p -P port 登录 MySQL 数据库   mysql -h ip_address -P 3306 -u root -p123456 远程登录数据库（端口”3306”，用户名为 “root”，密码”123456”）   show databases 查看数据库   use database_name 使用数据库   s">
+<meta name="twitter:description" content="数据库操作篇     命令 解释     mysql -u &amp;lt;username&amp;gt; -p -P &amp;lt;port&amp;gt; 登录 MySQL 数据库   mysql -h &amp;lt;ip_address&amp;gt; -P &amp;lt;port&amp;gt; -u &amp;lt;username&amp;gt; -p&amp;lt;password&amp;gt; 远程登录数据库   show databases 查看所有数据库">
 
 
 
@@ -498,12 +498,24 @@
                 
               
 
-              <time title="创建时间：2019-05-24 21:45:50 / 修改时间：21:49:09" itemprop="dateCreated datePublished" datetime="2019-05-24T21:45:50+08:00">2019-05-24</time>
+              <time title="创建时间：2019-05-24 21:45:50" itemprop="dateCreated datePublished" datetime="2019-05-24T21:45:50+08:00">2019-05-24</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-17 22:43:46" itemprop="dateModified" datetime="2019-07-17T22:43:46+08:00">2019-07-17</time>
               
             
           </span>
@@ -563,7 +575,7 @@
 
       
         <blockquote>
-<p>常用 命令篇</p>
+<p>数据库操作篇</p>
 </blockquote>
 <table>
 <thead>
@@ -574,43 +586,27 @@
 </thead>
 <tbody>
 <tr>
-<td>mysql -u root -p -P port</td>
+<td>mysql -u &lt;username&gt; -p -P &lt;port&gt;</td>
 <td>登录 MySQL 数据库</td>
 </tr>
 <tr>
-<td>mysql -h ip_address -P 3306 -u root -p123456</td>
-<td>远程登录数据库（端口”3306”，用户名为 “root”，密码”123456”）</td>
+<td>mysql -h &lt;ip_address&gt; -P &lt;port&gt; -u &lt;username&gt; -p&lt;password&gt;</td>
+<td>远程登录数据库</td>
 </tr>
 <tr>
 <td>show databases</td>
-<td>查看数据库</td>
+<td>查看所有数据库</td>
 </tr>
 <tr>
-<td>use database_name</td>
-<td>使用数据库</td>
+<td>use &lt;database_name&gt;</td>
+<td>选择数据库并使用</td>
 </tr>
 <tr>
-<td>show tables</td>
-<td>查看都有哪些表</td>
-</tr>
-<tr>
-<td>desc table_name</td>
-<td>查看表结构</td>
-</tr>
-<tr>
-<td>drop table table_name</td>
-<td>删除表</td>
-</tr>
-<tr>
-<td>drop database database_name</td>
+<td>drop database &lt;database_name&gt;</td>
 <td>删除数据库</td>
 </tr>
 <tr>
-<td>show create table table_name</td>
-<td>显示建表语句</td>
-</tr>
-<tr>
-<td>show create schema database_name</td>
+<td>show create schema &lt;database_name&gt;</td>
 <td>显示创建数据库语句</td>
 </tr>
 <tr>
@@ -620,7 +616,96 @@
 </tbody>
 </table>
 <blockquote>
-<p>数据导入导出 命令篇</p>
+<p>表操作篇</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>show tables</td>
+<td>查看所有数据表</td>
+</tr>
+<tr>
+<td>desc &lt;table_name&gt;</td>
+<td>查看表结构</td>
+</tr>
+<tr>
+<td>show create table &lt;table_name&gt;</td>
+<td>查看表定义</td>
+</tr>
+<tr>
+<td>show create table &lt;table_name&gt; \G</td>
+<td>查看表定义（详细）</td>
+</tr>
+<tr>
+<td>drop table &lt;table_name&gt;</td>
+<td>删除表</td>
+</tr>
+<tr>
+<td>alter table &lt;table_name&gt; modify &lt;column_name&gt; &lt;data_type&gt;</td>
+<td>修改表字段</td>
+</tr>
+<tr>
+<td>alter table &lt;table_name&gt; add column &lt;column_name&gt; &lt;data_type&gt;</td>
+<td>添加表字段</td>
+</tr>
+<tr>
+<td>alter table &lt;table_name&gt; drop column &lt;column_name&gt;</td>
+<td>删除表字段</td>
+</tr>
+<tr>
+<td>alter table &lt;table_name&gt; change &lt;column_name&gt; &lt;new_column_name&gt; &lt;data_type&gt;</td>
+<td>字段改名</td>
+</tr>
+<tr>
+<td>alter table &lt;table_name&gt; rename &lt;new_table_name&gt;</td>
+<td>修改表名</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>索引篇</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>show index from &lt;table_name&gt;</td>
+<td>查看表索引</td>
+</tr>
+<tr>
+<td>repair table &lt;table_name&gt; quick</td>
+<td>重建索引命令</td>
+</tr>
+<tr>
+<td>alter table &lt;table_name&gt; add index &lt;index_name&gt; (column list)</td>
+<td>创建联合索引</td>
+</tr>
+<tr>
+<td>alter table &lt;table_name&gt; add unique &lt;index_name&gt; (column list)</td>
+<td>创建普通索引</td>
+</tr>
+<tr>
+<td>alter table &lt;table_name&gt; add primary key &lt;index_name&gt; (column list)</td>
+<td>创建主键索引</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>数据控制语句(DCL)</p>
+</blockquote>
+<blockquote>
+<p>数据导入导出篇</p>
 </blockquote>
 <table>
 <thead>
@@ -635,38 +720,39 @@
 <td>执行 .sql 脚本</td>
 </tr>
 <tr>
-<td>mysqldump -h host -uroot -p database_name &gt; dump.sql</td>
+<td>mysqldump -h &lt;host&gt; -u&lt;user_name&gt; -p &lt;database_name&gt; &gt; dump.sql</td>
 <td>dump 整个数据库的表结构和数据</td>
 </tr>
 <tr>
-<td>mysqldump -h host -uroot -p database_name table_name &gt; dump.sql</td>
+<td>mysqldump -h &lt;host&gt; -u&lt;user_name&gt; -p &lt;database_name&gt; &lt;table_name&gt; &gt; dump.sql</td>
 <td>dump 单个数据库表结构和数据</td>
 </tr>
 <tr>
-<td>mysqldump -h host -uroot -p  -d database_name &gt; dump.sql</td>
+<td>mysqldump -h &lt;host&gt; -u&lt;user_name&gt; -p -d &lt;database_name&gt; &gt; dump.sql</td>
 <td>dump 整个数据库的表结构</td>
 </tr>
 <tr>
-<td>mysqldump -h host -uroot -p -d database_name table_name &gt; dump.sql</td>
+<td>mysqldump -h &lt;host&gt; -u&lt;user_name&gt; -p -d &lt;database_name&gt; &lt;table_name&gt; &gt; dump.sql</td>
 <td>dump 单个数据库表结构</td>
 </tr>
 <tr>
-<td>mysqldump -h host -uroot -p -t database_name &gt; dump.sql</td>
+<td>mysqldump -h &lt;host&gt; -u&lt;user_name&gt; -p -t &lt;database_name&gt; &gt; dump.sql</td>
 <td>dump 整个数据库的数据，不添加 create table</td>
 </tr>
 <tr>
-<td>mysql -uuser_name -ppassword -hhost -P3306 -D db_name –default-character-set=utf8 -e “select * from custom where com_uid = ‘001’” &gt; test.csv</td>
+<td>mysql -u&lt;user_name&gt; -p&lt;password&gt; -h&lt;host&gt; -P&lt;port&gt; -D &lt;database_name&gt; –default-character-set=utf8 -e “select * from custom where com_uid = ‘001’” &gt; test.csv</td>
 <td>将数据库中的数据导出到 excel 文件中 user_name = 数据库用户名 password = 数据库密码 host = 主机名称 db_name = 数据库名称</td>
 </tr>
 <tr>
-<td>mysqldump -uuser_name -ppassword -hhost -P 3306 db_name table_name –where=”com_uid=’001’” &gt; /Users/dump.sql</td>
+<td>mysqldump -u&lt;user_name&gt; -p&lt;password&gt; -h&lt;host&gt; -P &lt;port&gt; &lt;database_name&gt; &lt;table_name&gt; –where=”com_uid=’001’” &gt; /Users/dump.sql</td>
 <td>将数据库中的数据 dump 到 sql 文件中 user_name = 数据库用户名 password = 数据库密码 host = 主机名称 db_name = 数据库名称 table_name = 表名</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>索引 命令篇</p>
+<p>其它篇</p>
 </blockquote>
+<p>字符集相关</p>
 <table>
 <thead>
 <tr>
@@ -676,27 +762,46 @@
 </thead>
 <tbody>
 <tr>
-<td>show index from table_name</td>
-<td>查看表索引</td>
+<td>show variables like ‘character%’</td>
+<td>查看字符集</td>
 </tr>
 <tr>
-<td>repair table table_name quick</td>
-<td>重建索引命令</td>
-</tr>
-<tr>
-<td>alter table table_name add index index_name (column list)</td>
-<td>创建联合索引</td>
-</tr>
-<tr>
-<td>alter table table_name add unique index_name (column list)</td>
-<td>创建普通索引</td>
-</tr>
-<tr>
-<td>alter table table_name add primary key index_name (column list)</td>
-<td>创建主键索引</td>
+<td>create database &lt;database_name&gt; character set utf8</td>
+<td>创建数据库时指定字符集</td>
 </tr>
 </tbody>
 </table>
+<p>时区相关</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>show variables like “%time_zone%”</td>
+<td>查看当前时区（UTC 为世界统一时间，中国为 UTC+8）</td>
+</tr>
+<tr>
+<td>set global time_zone = ‘+8:00’</td>
+<td>修改 mysql 全局时区为北京时间，即我们所在的东8区</td>
+</tr>
+<tr>
+<td>set time_zone = ‘+8:00’</td>
+<td>修改当前会话时区</td>
+</tr>
+<tr>
+<td>flush privileges</td>
+<td>立即生效</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>参考网址</p>
+</blockquote>
+<p><a href="https://mp.weixin.qq.com/s/M5181QN-weZc8Z-gd9q2Sg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/M5181QN-weZc8Z-gd9q2Sg</a></p>
 
       
     </div>

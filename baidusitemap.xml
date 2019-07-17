@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zhangshengjian.github.io/2019/05/24/MySQL-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2019-07-17</lastmod>
+  </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/07/17/Spring-Task/</loc>
     <lastmod>2019-07-17</lastmod>
   </url>  <url>
@@ -69,9 +72,6 @@
   </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/05/29/SQL-for-update/</loc>
     <lastmod>2019-06-02</lastmod>
-  </url>  <url>
-    <loc>https://zhangshengjian.github.io/2019/05/24/MySQL-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2019-05-24</lastmod>
   </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/05/20/Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-05-21</lastmod>
