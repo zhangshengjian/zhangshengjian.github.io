@@ -130,16 +130,18 @@
 
 
 
-  <meta name="description" content="make one more step.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="坚持到放弃">
-<meta property="og:url" content="https://zhangshengjian.github.io/categories/Redis/index.html">
+  <meta name="description" content="在代码中遇到过 setDaemon(true)，但是一直没弄清楚该方法是做什么的，现在研究一波这东西到底是做什么的。  定义守护线程，也称”服务线程”，在没有用户线程可服务时会自动离开。 优先级：守护线程的优先级比较低，用于为系统中的其它对象和线程提供服务。 设置：通过 setDaemon(true) 来设置线程为”守护线程”；将一个用户线程设置为守护线程的方式是在 线程对象创建 之前用线程对象">
+<meta name="keywords" content="Java,多线程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java setDaemon(true)">
+<meta property="og:url" content="https://zhangshengjian.github.io/2019/08/22/Java-setDaemon-true/index.html">
 <meta property="og:site_name" content="坚持到放弃">
-<meta property="og:description" content="make one more step.">
+<meta property="og:description" content="在代码中遇到过 setDaemon(true)，但是一直没弄清楚该方法是做什么的，现在研究一波这东西到底是做什么的。  定义守护线程，也称”服务线程”，在没有用户线程可服务时会自动离开。 优先级：守护线程的优先级比较低，用于为系统中的其它对象和线程提供服务。 设置：通过 setDaemon(true) 来设置线程为”守护线程”；将一个用户线程设置为守护线程的方式是在 线程对象创建 之前用线程对象">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-21T23:49:49.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="坚持到放弃">
-<meta name="twitter:description" content="make one more step.">
+<meta name="twitter:title" content="Java setDaemon(true)">
+<meta name="twitter:description" content="在代码中遇到过 setDaemon(true)，但是一直没弄清楚该方法是做什么的，现在研究一波这东西到底是做什么的。  定义守护线程，也称”服务线程”，在没有用户线程可服务时会自动离开。 优先级：守护线程的优先级比较低，用于为系统中的其它对象和线程提供服务。 设置：通过 setDaemon(true) 来设置线程为”守护线程”；将一个用户线程设置为守护线程的方式是在 线程对象创建 之前用线程对象">
 
 
 
@@ -149,7 +151,7 @@
 
   
   
-  <link rel="canonical" href="https://zhangshengjian.github.io/categories/Redis/">
+  <link rel="canonical" href="https://zhangshengjian.github.io/2019/08/22/Java-setDaemon-true/">
 
 
 
@@ -159,7 +161,7 @@
   };
 </script>
 
-  <title>分类: Redis | 坚持到放弃</title>
+  <title>Java setDaemon(true) | 坚持到放弃</title>
   
 
 
@@ -211,7 +213,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -287,7 +289,7 @@
         
         
           
-          <li class="menu-item menu-item-分类 menu-item-active">
+          <li class="menu-item menu-item-分类">
 
     
     
@@ -385,34 +387,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -465,57 +439,284 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Redis<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhangshengjian.github.io/2019/08/22/Java-setDaemon-true/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张 胜 健 的 博 客">
+      <meta itemprop="description" content="make one more step.">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="坚持到放弃">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/07/12/Redis-入门/" itemprop="url">
-            
-              <span itemprop="name">Redis 入门</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Java setDaemon(true)
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-12T15:59:00+08:00" content="2019-07-12">
-          07-12
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-22 07:36:00 / 修改时间：07:49:49" itemprop="dateCreated datePublished" datetime="2019-08-22T07:36:00+08:00">2019-08-22</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>在代码中遇到过 setDaemon(true)，但是一直没弄清楚该方法是做什么的，现在研究一波这东西到底是做什么的。</p>
+</blockquote>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>守护线程，也称”服务线程”，在没有用户线程可服务时会自动离开。</p>
+<p>优先级：守护线程的优先级比较低，用于为系统中的其它对象和线程提供服务。</p>
+<p>设置：通过 <code>setDaemon(true)</code> 来设置线程为”守护线程”；将一个用户线程设置为守护线程的方式是在 <strong>线程对象创建</strong> 之前用线程对象的 <code>setDaemon</code> 方法。</p>
+<h3 id="守护线程例子"><a href="#守护线程例子" class="headerlink" title="守护线程例子"></a>守护线程例子</h3><p>垃圾回收线程就是一个经典的守护线程，当程序中不再有任何运行的 Thread，程序就不会再产生垃圾，垃圾回收器也就无事可做，所以当垃圾回收线程是 JVM 上仅剩的线程时，垃圾回收线程会自动离开。它始终在低级别的状态中运行，用于实时监控和管理系统中的可回收资源。</p>
+<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>守护进程（Daemon）是运行在后台的一种特殊进程。它独立于控制终端并且周期性地执行某种任务或等待处理某些发生的事件。也就是说守护线程不依赖于终端，但是依赖于系统，与系统”同生共死”。那 Java 的守护线程是什么样子的呢。当 JVM 中所有的线程都是守护线程的时候，JVM 就可以退出了；如果还有一个或以上的非守护线程则 JVM 不会退出。</p>
+<h3 id="例子程序"><a href="#例子程序" class="headerlink" title="例子程序"></a>例子程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">thread = new Thread(this);</span><br><span class="line"></span><br><span class="line">thread.setDaemon(true);</span><br><span class="line"></span><br><span class="line">thread.start();</span><br></pre></td></tr></table></figure>
+<p>当 Java 虚拟机中没有非守护线程在运行的时候，Java 虚拟机会关闭。当所有常规线程运行完毕以后，守护线程不管运行到哪里，虚拟机都会退出运行。所以守护线程最好不要写一些会影响程序的业务逻辑。否则无法预料程序到底会出现什么问题。</p>
 
       
     </div>
 
+    
+      
+
+
+    
+
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align: center;font-size: 13px;letter-spacing: 10px;user-select: none;margin-top: 50px;color: #bbb;">本文结束啦 <i class="fa fa-star"></i> 感谢您阅读</div>
+    
+</div>
+
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>如果你觉得这篇文章对你有用，欢迎赞赏哦~</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="张 胜 健 的 博 客 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.png" alt="张 胜 健 的 博 客 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/多线程/" rel="tag"><i class="fa fa-tag"></i> 多线程</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/12/问题篇/" rel="next" title="问题篇">
+                <i class="fa fa-chevron-left"></i> 问题篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      <!---->
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDgxMi8yMTMzMw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -535,8 +736,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -838,6 +1048,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#守护线程例子"><span class="nav-number">2.</span> <span class="nav-text">守护线程例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生命周期"><span class="nav-number">3.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子程序"><span class="nav-number">4.</span> <span class="nav-text">例子程序</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -1022,6 +1249,10 @@ setInterval("createtime()",250);
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -1037,6 +1268,24 @@ setInterval("createtime()",250);
 
   
 
+
+  
+    
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+  
 
 
   

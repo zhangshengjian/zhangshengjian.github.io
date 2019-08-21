@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zhangshengjian.github.io/2019/08/22/Java-setDaemon-true/</loc>
+    <lastmod>2019-08-21</lastmod>
+  </url>  <url>
+    <loc>https://zhangshengjian.github.io/2019/08/12/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/</loc>
+    <lastmod>2019-08-21</lastmod>
+  </url>  <url>
+    <loc>https://zhangshengjian.github.io/2019/08/12/%E6%8A%80%E6%9C%AF-%E6%A6%82%E5%BF%B5%E7%AF%87/</loc>
+    <lastmod>2019-08-21</lastmod>
+  </url>  <url>
+    <loc>https://zhangshengjian.github.io/2019/08/12/%E9%97%AE%E9%A2%98%E7%AF%87/</loc>
+    <lastmod>2019-08-20</lastmod>
+  </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/07/23/Intellij-IDEA/</loc>
     <lastmod>2019-08-14</lastmod>
   </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/06/27/Java-%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
-    <lastmod>2019-08-12</lastmod>
-  </url>  <url>
-    <loc>https://zhangshengjian.github.io/2019/08/12/%E9%97%AE%E9%A2%98%E7%AF%87/</loc>
-    <lastmod>2019-08-12</lastmod>
-  </url>  <url>
-    <loc>https://zhangshengjian.github.io/2019/08/12/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/</loc>
-    <lastmod>2019-08-12</lastmod>
-  </url>  <url>
-    <loc>https://zhangshengjian.github.io/2019/08/12/%E6%8A%80%E6%9C%AF-%E6%A6%82%E5%BF%B5%E7%AF%87/</loc>
     <lastmod>2019-08-12</lastmod>
   </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/08/04/Elasticsearch-Demo/</loc>

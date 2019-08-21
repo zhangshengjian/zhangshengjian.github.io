@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangshengjian.github.io/"/>
-  <updated>2019-08-12T13:26:45.670Z</updated>
+  <updated>2019-08-21T23:49:49.485Z</updated>
   <id>https://zhangshengjian.github.io/</id>
   
   <author>
@@ -17,20 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>问题篇</title>
-    <link href="https://zhangshengjian.github.io/2019/08/12/%E9%97%AE%E9%A2%98%E7%AF%87/"/>
-    <id>https://zhangshengjian.github.io/2019/08/12/问题篇/</id>
-    <published>2019-08-12T13:25:00.000Z</published>
-    <updated>2019-08-12T13:26:45.670Z</updated>
+    <title>Java setDaemon(true)</title>
+    <link href="https://zhangshengjian.github.io/2019/08/22/Java-setDaemon-true/"/>
+    <id>https://zhangshengjian.github.io/2019/08/22/Java-setDaemon-true/</id>
+    <published>2019-08-21T23:36:00.000Z</published>
+    <updated>2019-08-21T23:49:49.485Z</updated>
     
-    <content type="html"><![CDATA[<p>标记一波需要研究的技术。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>在代码中遇到过 setDaemon(true)，但是一直没弄清楚该方法是做什么的，现在研究一波这东西到底是做什么的。</p></blockquote><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>守护线程，也称”服务线程”，在没有用户线程可服务时会自动离开。</p><p>优先级：守护线程的优先级比较低，用于为系统中的其它对象和线程提供服务。</p><p>设置：通过 <code>setDaemon(true)</code> 来设置线程为”守护线程”；将一个用户线程设置为守护线程的方式是在 <strong>线程对象创建</strong> 之前用线程对象的 <code>setDaemon</code> 方法。</p><h3 id="守护线程例子"><a href="#守护线程例子" class="headerlink" title="守护线程例子"></a>守护线程例子</h3><p>垃圾回收线程就是一个经典的守护线程，当程序中不再有任何运行的 Thread，程序就不会再产生垃圾，垃圾回收器也就无事可做，所以当垃圾回收线程是 JVM 上仅剩的线程时，垃圾回收线程会自动离开。它始终在低级别的状态中运行，用于实时监控和管理系统中的可回收资源。</p><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>守护进程（Daemon）是运行在后台的一种特殊进程。它独立于控制终端并且周期性地执行某种任务或等待处理某些发生的事件。也就是说守护线程不依赖于终端，但是依赖于系统，与系统”同生共死”。那 Java 的守护线程是什么样子的呢。当 JVM 中所有的线程都是守护线程的时候，JVM 就可以退出了；如果还有一个或以上的非守护线程则 JVM 不会退出。</p><h3 id="例子程序"><a href="#例子程序" class="headerlink" title="例子程序"></a>例子程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">thread = new Thread(this);</span><br><span class="line"></span><br><span class="line">thread.setDaemon(true);</span><br><span class="line"></span><br><span class="line">thread.start();</span><br></pre></td></tr></table></figure><p>当 Java 虚拟机中没有非守护线程在运行的时候，Java 虚拟机会关闭。当所有常规线程运行完毕以后，守护线程不管运行到哪里，虚拟机都会退出运行。所以守护线程最好不要写一些会影响程序的业务逻辑。否则无法预料程序到底会出现什么问题。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;标记一波需要研究的技术。&lt;/p&gt;
-
+        &lt;blockquote&gt;
+&lt;p&gt;在代码中遇到过 setDaemon(true)，但是一直没弄清楚该方法是做什么的，现在研究一波这东西到底是做什么的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; ti
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://zhangshengjian.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://zhangshengjian.github.io/tags/Java/"/>
+    
+      <category term="多线程" scheme="https://zhangshengjian.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>问题篇</title>
+    <link href="https://zhangshengjian.github.io/2019/08/12/%E9%97%AE%E9%A2%98%E7%AF%87/"/>
+    <id>https://zhangshengjian.github.io/2019/08/12/问题篇/</id>
+    <published>2019-08-12T13:25:00.000Z</published>
+    <updated>2019-08-20T23:50:43.359Z</updated>
+    
+    <content type="html"><![CDATA[<p>标记一波需要研究的知识。</p><ul><li>分布式项目经验（zookeeper、dubbo、springcloud 等）</li><li>SQL 能力（group by、join、left join、right join 等）</li><li>阶段性的总结</li><li>沟通能力</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;标记一波需要研究的知识。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分布式项目经验（zookeeper、dubbo、springcloud 等）&lt;/li&gt;
+&lt;li&gt;SQL 能力（group by、join、left join、right join 等）&lt;/li&gt;
+&lt;li&gt;阶段性的总结&lt;/l
       
     
     </summary>
@@ -47,9 +80,9 @@
     <link href="https://zhangshengjian.github.io/2019/08/12/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/"/>
     <id>https://zhangshengjian.github.io/2019/08/12/心灵鸡汤/</id>
     <published>2019-08-12T13:22:00.000Z</published>
-    <updated>2019-08-12T13:24:11.201Z</updated>
+    <updated>2019-08-21T23:30:21.185Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="团队篇"><a href="#团队篇" class="headerlink" title="团队篇"></a>团队篇</h3><p>作为一个领导人，应该控制自己的情绪，很多时候发脾气是无能的表现，合理的情绪控制对于团队的和谐，稳定军心有大作用。 - 马云</p><h3 id="励志篇"><a href="#励志篇" class="headerlink" title="励志篇"></a>励志篇</h3><p>短暂的激情是不值钱的，只有持久的激情才是赚钱的。 - 马云</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="团队篇"><a href="#团队篇" class="headerlink" title="团队篇"></a>团队篇</h3><p>作为一个领导人，应该控制自己的情绪，很多时候发脾气是无能的表现，合理的情绪控制对于团队的和谐，稳定军心有大作用。 - 马云</p><h3 id="励志篇"><a href="#励志篇" class="headerlink" title="励志篇"></a>励志篇</h3><p>短暂的激情是不值钱的，只有持久的激情才是赚钱的。 - 马云</p><h3 id="实干篇"><a href="#实干篇" class="headerlink" title="实干篇"></a>实干篇</h3><p>我喜欢程序员，他们单纯、固执、容易体会到成就感；面对压力，能够挑灯夜战不眠不休；面对困难，能够迎难而上挑战自我。</p><p>对于大部分壁垒不高的专业，在大学里学的和工作中实际用到的，差距很大。而企业看重的是应届生的学习能力，真不是你读过某个专业4年。</p>]]></content>
     
     <summary type="html">
     
@@ -73,9 +106,9 @@
     <link href="https://zhangshengjian.github.io/2019/08/12/%E6%8A%80%E6%9C%AF-%E6%A6%82%E5%BF%B5%E7%AF%87/"/>
     <id>https://zhangshengjian.github.io/2019/08/12/技术-概念篇/</id>
     <published>2019-08-12T13:10:00.000Z</published>
-    <updated>2019-08-12T13:19:59.295Z</updated>
+    <updated>2019-08-21T23:27:46.674Z</updated>
     
-    <content type="html"><![CDATA[<p>技术视野的拓展，收藏一波阅读过的好的技术文章～～～</p><p><a href="https://blog.csdn.net/weixin_43167418/article/details/98564755" target="_blank" rel="noopener">CDN</a></p>]]></content>
+    <content type="html"><![CDATA[<p>技术视野的拓展，收藏一波阅读过的好的技术文章～～～</p><p><a href="https://blog.csdn.net/weixin_43167418/article/details/98564755" target="_blank" rel="noopener">CDN</a></p><p><a href="https://blog.csdn.net/qiuzhongweiwei/article/details/80172529" target="_blank" rel="noopener">网关</a></p>]]></content>
     
     <summary type="html">
     
@@ -553,31 +586,6 @@
     
     
       <category term="Redis" scheme="https://zhangshengjian.github.io/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL 使用问题记录</title>
-    <link href="https://zhangshengjian.github.io/2019/07/12/MySQL-%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>https://zhangshengjian.github.io/2019/07/12/MySQL-使用问题记录/</id>
-    <published>2019-07-12T05:17:00.000Z</published>
-    <updated>2019-07-12T05:21:46.323Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Mac-启动-mysql-服务失败"><a href="#Mac-启动-mysql-服务失败" class="headerlink" title="Mac 启动 mysql 服务失败"></a>Mac 启动 mysql 服务失败</h4><p>Warning:The /usr/local/mysql/data directory is not owned by the ‘mysql’ or ‘_mysql’</p><p>解决方法：<br>这应该是某种情况下导致 /usr/local/mysql/data 的宿主发生了改变，只需要在终端运行如下命令即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R mysql /usr/local/mysql/data</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;Mac-启动-mysql-服务失败&quot;&gt;&lt;a href=&quot;#Mac-启动-mysql-服务失败&quot; class=&quot;headerlink&quot; title=&quot;Mac 启动 mysql 服务失败&quot;&gt;&lt;/a&gt;Mac 启动 mysql 服务失败&lt;/h4&gt;&lt;p&gt;Warning:Th
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="https://zhangshengjian.github.io/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="https://zhangshengjian.github.io/tags/MySQL/"/>
     
   </entry>
   
