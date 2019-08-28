@@ -74,35 +74,6 @@
   </entry>
   
   <entry>
-    <title>问题篇</title>
-    <link href="https://zhangshengjian.github.io/2019/08/12/%E9%97%AE%E9%A2%98%E7%AF%87/"/>
-    <id>https://zhangshengjian.github.io/2019/08/12/问题篇/</id>
-    <published>2019-08-12T13:25:00.000Z</published>
-    <updated>2019-08-20T23:50:43.359Z</updated>
-    
-    <content type="html"><![CDATA[<p>标记一波需要研究的知识。</p><ul><li>分布式项目经验（zookeeper、dubbo、springcloud 等）</li><li>SQL 能力（group by、join、left join、right join 等）</li><li>阶段性的总结</li><li>沟通能力</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;标记一波需要研究的知识。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;分布式项目经验（zookeeper、dubbo、springcloud 等）&lt;/li&gt;
-&lt;li&gt;SQL 能力（group by、join、left join、right join 等）&lt;/li&gt;
-&lt;li&gt;阶段性的总结&lt;/l
-      
-    
-    </summary>
-    
-      <category term="Other" scheme="https://zhangshengjian.github.io/categories/Other/"/>
-    
-    
-      <category term="Other" scheme="https://zhangshengjian.github.io/tags/Other/"/>
-    
-  </entry>
-  
-  <entry>
     <title>心灵鸡汤</title>
     <link href="https://zhangshengjian.github.io/2019/08/12/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/"/>
     <id>https://zhangshengjian.github.io/2019/08/12/心灵鸡汤/</id>
@@ -133,9 +104,9 @@
     <link href="https://zhangshengjian.github.io/2019/08/12/%E6%8A%80%E6%9C%AF-%E6%A6%82%E5%BF%B5%E7%AF%87/"/>
     <id>https://zhangshengjian.github.io/2019/08/12/技术-概念篇/</id>
     <published>2019-08-12T13:10:00.000Z</published>
-    <updated>2019-08-25T23:47:26.401Z</updated>
+    <updated>2019-08-28T14:17:26.719Z</updated>
     
-    <content type="html"><![CDATA[<p>技术视野的拓展，收藏一波阅读过的好的技术文章～～～</p><p><a href="https://blog.csdn.net/weixin_43167418/article/details/98564755" target="_blank" rel="noopener">CDN</a></p><p><a href="https://blog.csdn.net/qiuzhongweiwei/article/details/80172529" target="_blank" rel="noopener">网关</a></p><p><a href="https://blog.csdn.net/baron_leizhang/article/details/99675933" target="_blank" rel="noopener">如何写邮件</a></p>]]></content>
+    <content type="html"><![CDATA[<p>技术视野的拓展，收藏一波阅读过的好的技术文章～～～</p><p><a href="https://blog.csdn.net/weixin_43167418/article/details/98564755" target="_blank" rel="noopener"><u>CDN<u></u></u></a></p><p><a href="https://blog.csdn.net/qiuzhongweiwei/article/details/80172529" target="_blank" rel="noopener"><u>网关<u></u></u></a></p><p><a href="https://blog.csdn.net/baron_leizhang/article/details/99675933" target="_blank" rel="noopener"><u>如何写邮件<u></u></u></a></p>]]></content>
     
     <summary type="html">
     
@@ -585,6 +556,34 @@
     
     
       <category term="RabbitMQ" scheme="https://zhangshengjian.github.io/tags/RabbitMQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis 入门</title>
+    <link href="https://zhangshengjian.github.io/2019/07/12/Redis-%E5%85%A5%E9%97%A8/"/>
+    <id>https://zhangshengjian.github.io/2019/07/12/Redis-入门/</id>
+    <published>2019-07-12T07:59:00.000Z</published>
+    <updated>2019-07-15T08:51:20.819Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Redis 官网 <a href="http://redis.io/" target="_blank" rel="noopener">http://redis.io/</a></p></blockquote><h4 id="Redis-简介"><a href="#Redis-简介" class="headerlink" title="Redis 简介"></a>Redis 简介</h4><blockquote><p>Redis 是用 C 语言开发的一个高性能键值对数据库，可用于数据缓存，主要用于处理大量数据的高访问负载。</p></blockquote><h4 id="Mac-安装-Redis"><a href="#Mac-安装-Redis" class="headerlink" title="Mac 安装 Redis"></a>Mac 安装 Redis</h4><ul><li>下载 Redis，下载地址：<a href="http://download.redis.io/releases/" target="_blank" rel="noopener">http://download.redis.io/releases/</a></li><li><p>解压 Redis 安装文件到 /usr/local 目录下，并执行如下命令即可</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 编译测试</span><br><span class="line">sudo make test</span><br><span class="line"></span><br><span class="line"># 安装</span><br><span class="line">sudo make install</span><br><span class="line"></span><br><span class="line"># 启动 redis 服务器</span><br><span class="line">redis-server</span><br></pre></td></tr></table></figure></li><li><p>至此安装完毕<br><img src="/images/pasted-22.png" alt="图一"></p></li></ul><h4 id="Redis-配置"><a href="#Redis-配置" class="headerlink" title="Redis 配置"></a>Redis 配置</h4><ul><li><p>在 /usr/local 目录创建 bin, etc 两个文件夹，在 redis 目录下创建 db 文件夹</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/local/bin</span><br><span class="line">sudo mkdir /usr/local/etc</span><br><span class="line">sudo mkdir /usr/local/redis-xxx/db</span><br></pre></td></tr></table></figure></li><li><p>将 /usr/local/redis-x.x.x/src 目录下的 mkreleasehdr.sh, redis-benchmark, redis-check-rdb, redis-cli, redis server 拷贝至 /usr/local/bin 目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/local/redis-x.x.x/src/mkreleasehdr.sh /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-benchmark /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-check-rdb /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-cli /usr/local/bin</span><br><span class="line">sudo cp /usr/local/redis-x.x.x/src/redis-server /usr/local/bin</span><br></pre></td></tr></table></figure></li><li><p>将 redis.conf 拷贝至目录 etc</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/local/redis-x.x.x/redis.conf /usr/local/etc</span><br></pre></td></tr></table></figure></li><li><p>修改 redis.conf<br>进入 redis/etc 目录，修改 redis.conf，如下内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"># 修改为守护模式</span><br><span class="line"> </span><br><span class="line">daemonize yes</span><br><span class="line"></span><br><span class="line"># 设置进程锁文件</span><br><span class="line"> </span><br><span class="line">pidfile /usr/local/redis/redis.pid</span><br><span class="line"></span><br><span class="line"># 端口</span><br><span class="line"> </span><br><span class="line">port 6379</span><br><span class="line"></span><br><span class="line"># 客户端超时时间</span><br><span class="line"></span><br><span class="line">timeout 300</span><br><span class="line"></span><br><span class="line"># 日志级别</span><br><span class="line"> </span><br><span class="line">loglevel debug</span><br><span class="line"></span><br><span class="line"># 日志文件位置</span><br><span class="line"> </span><br><span class="line">logfile /usr/local/redis/log-redis.log</span><br><span class="line"></span><br><span class="line"># 设置数据库的数量，默认数据库为0，可以使用 SELECT &lt;dbid&gt; 命令在连接上指定数据库id</span><br><span class="line"> </span><br><span class="line">databases 8</span><br><span class="line"></span><br><span class="line"># 指定在多长时间内，有多少次更新操作，就将数据同步到数据文件，可以多个条件配合</span><br><span class="line"># save &lt;seconds&gt; &lt;changes&gt;</span><br><span class="line"># Redis 默认配置文件中提供了三个条件：</span><br><span class="line"> </span><br><span class="line">save 900 1</span><br><span class="line">save 300 10</span><br><span class="line">save 60 10000</span><br><span class="line"></span><br><span class="line"># 指定存储至本地数据库时是否压缩数据，默认为 yes，Redis 采用 LZF 压缩，如果为了节省 CPU 时间，可以关闭该#选项，但会导致数据库文件变的巨大</span><br><span class="line"></span><br><span class="line">rdbcompression yes</span><br><span class="line"></span><br><span class="line"># 指定本地数据库文件名</span><br><span class="line"> </span><br><span class="line">dbfilename dump.rdb</span><br><span class="line"> </span><br><span class="line"># 指定本地数据库路径</span><br><span class="line"> </span><br><span class="line">dir /usr/local/redis/db/</span><br><span class="line"></span><br><span class="line"># 指定是否在每次更新操作后进行日志记录，Redis在默认情况下是异步的把数据写入磁盘，如果不开启，可能会在断电时导致一段时间内的数据丢失。</span><br><span class="line"># 因为 redis本身同步数据文件是按上面save条件来同步的，所以有的数据会在一段时间内只存在于内存中</span><br><span class="line"> </span><br><span class="line">appendonly no</span><br><span class="line"></span><br><span class="line"># 指定更新日志条件，共有3个可选值：</span><br><span class="line"># no：表示等操作系统进行数据缓存同步到磁盘（快）</span><br><span class="line"># always：表示每次更新操作后手动调用 fsync() 将数据写到磁盘（慢，安全）</span><br><span class="line"># everysec：表示每秒同步一次（折衷，默认值）</span><br><span class="line"> </span><br><span class="line">appendfsync everysec</span><br></pre></td></tr></table></figure></li><li><p>启动服务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo redis-server /usr/local/etc/redis.conf</span><br></pre></td></tr></table></figure></li><li><p>查看日志</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f /usr/local/redis-x.x.x/log-redis.log</span><br></pre></td></tr></table></figure></li><li><p>关闭服务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli shutdown</span><br></pre></td></tr></table></figure></li></ul><h4 id="Redis-缓存清理"><a href="#Redis-缓存清理" class="headerlink" title="Redis 缓存清理"></a>Redis 缓存清理</h4><p>准备工作：启动 redis 后才可以执行后面内容（sudo redis-server /usr/local/etc/redis.conf）</p><ol><li><p>访问 redis 根目录 cd /usr/local/redis-x.x.x</p></li><li><p>登录 redis：redis-cli -h 127.0.0.1 -p 6379</p></li><li><p>查看所有 key 值：keys *</p></li><li><p>删除指定索引的值：del key</p></li><li><p>清空整个 Redis 服务器的数据：flushall </p></li><li><p>清空当前库中的所有 key：flushdb </p></li></ol><h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><blockquote><p><a href="https://blog.csdn.net/qq_38728790/article/details/82703308" target="_blank" rel="noopener">https://blog.csdn.net/qq_38728790/article/details/82703308</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Redis 官网 &lt;a href=&quot;http://redis.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://redis.io/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;Redis-简介&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="Redis" scheme="https://zhangshengjian.github.io/categories/Redis/"/>
+    
+    
+      <category term="Redis" scheme="https://zhangshengjian.github.io/tags/Redis/"/>
     
   </entry>
   
