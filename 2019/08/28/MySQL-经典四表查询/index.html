@@ -130,18 +130,18 @@
 
 
 
-  <meta name="description" content="标记一波需要研究的知识。  分布式项目经验（zookeeper、dubbo、springcloud 等） SQL 能力（group by、join、left join、right join 等） 阶段性的总结 沟通能力">
-<meta name="keywords" content="Other">
+  <meta name="description" content="创建表创建学生表1234567CREATE TABLE student(    sid VARCHAR(32),    sname VARCHAR(32),     sage INT,     ssex VARCHAR(8)); 创建课程表123456CREATE TABLE course(    cid VARCHAR(32),     cname VARCHAR(32),     tid VA">
+<meta name="keywords" content="MySQL,SQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="问题篇">
-<meta property="og:url" content="https://zhangshengjian.github.io/2019/08/12/问题篇/index.html">
+<meta property="og:title" content="MySQL 经典四表查询">
+<meta property="og:url" content="https://zhangshengjian.github.io/2019/08/28/MySQL-经典四表查询/index.html">
 <meta property="og:site_name" content="坚持到放弃">
-<meta property="og:description" content="标记一波需要研究的知识。  分布式项目经验（zookeeper、dubbo、springcloud 等） SQL 能力（group by、join、left join、right join 等） 阶段性的总结 沟通能力">
+<meta property="og:description" content="创建表创建学生表1234567CREATE TABLE student(    sid VARCHAR(32),    sname VARCHAR(32),     sage INT,     ssex VARCHAR(8)); 创建课程表123456CREATE TABLE course(    cid VARCHAR(32),     cname VARCHAR(32),     tid VA">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-20T23:50:43.359Z">
+<meta property="og:updated_time" content="2019-08-28T13:37:52.947Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="问题篇">
-<meta name="twitter:description" content="标记一波需要研究的知识。  分布式项目经验（zookeeper、dubbo、springcloud 等） SQL 能力（group by、join、left join、right join 等） 阶段性的总结 沟通能力">
+<meta name="twitter:title" content="MySQL 经典四表查询">
+<meta name="twitter:description" content="创建表创建学生表1234567CREATE TABLE student(    sid VARCHAR(32),    sname VARCHAR(32),     sage INT,     ssex VARCHAR(8)); 创建课程表123456CREATE TABLE course(    cid VARCHAR(32),     cname VARCHAR(32),     tid VA">
 
 
 
@@ -151,7 +151,7 @@
 
   
   
-  <link rel="canonical" href="https://zhangshengjian.github.io/2019/08/12/问题篇/">
+  <link rel="canonical" href="https://zhangshengjian.github.io/2019/08/28/MySQL-经典四表查询/">
 
 
 
@@ -161,7 +161,7 @@
   };
 </script>
 
-  <title>问题篇 | 坚持到放弃</title>
+  <title>MySQL 经典四表查询 | 坚持到放弃</title>
   
 
 
@@ -455,7 +455,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhangshengjian.github.io/2019/08/12/问题篇/">
+    <link itemprop="mainEntityOfPage" href="https://zhangshengjian.github.io/2019/08/28/MySQL-经典四表查询/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="张 胜 健 的 博 客">
@@ -472,7 +472,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">问题篇
+          <h1 class="post-title" itemprop="name headline">MySQL 经典四表查询
 
               
             
@@ -498,24 +498,12 @@
                 
               
 
-              <time title="创建时间：2019-08-12 21:25:00" itemprop="dateCreated datePublished" datetime="2019-08-12T21:25:00+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-28 21:09:00 / 修改时间：21:37:52" itemprop="dateCreated datePublished" datetime="2019-08-28T21:09:00+08:00">2019-08-28</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-21 07:50:43" itemprop="dateModified" datetime="2019-08-21T07:50:43+08:00">2019-08-21</time>
               
             
           </span>
@@ -532,7 +520,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a></span>
 
                 
                 
@@ -574,14 +562,27 @@
       
 
       
-        <p>标记一波需要研究的知识。</p>
-<ul>
-<li>分布式项目经验（zookeeper、dubbo、springcloud 等）</li>
-<li>SQL 能力（group by、join、left join、right join 等）</li>
-<li>阶段性的总结</li>
-<li>沟通能力</li>
-</ul>
-
+        <h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><h4 id="创建学生表"><a href="#创建学生表" class="headerlink" title="创建学生表"></a>创建学生表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE student</span><br><span class="line">(</span><br><span class="line">    sid VARCHAR(32),</span><br><span class="line">    sname VARCHAR(32), </span><br><span class="line">    sage INT, </span><br><span class="line">    ssex VARCHAR(8)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h4 id="创建课程表"><a href="#创建课程表" class="headerlink" title="创建课程表"></a>创建课程表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE course</span><br><span class="line">(</span><br><span class="line">    cid VARCHAR(32), </span><br><span class="line">    cname VARCHAR(32), </span><br><span class="line">    tid VARCHAR(32)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h4 id="创建学生课程分数表"><a href="#创建学生课程分数表" class="headerlink" title="创建学生课程分数表"></a>创建学生课程分数表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE sc</span><br><span class="line">( </span><br><span class="line">    sid VARCHAR(32), </span><br><span class="line">    cid VARCHAR(32), </span><br><span class="line">    score INT</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h4 id="创建教师表"><a href="#创建教师表" class="headerlink" title="创建教师表"></a>创建教师表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE teacher</span><br><span class="line">( </span><br><span class="line">    tid VARCHAR(32), </span><br><span class="line">    tname VARCHAR(16) </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h3 id="初始化表数据"><a href="#初始化表数据" class="headerlink" title="初始化表数据"></a>初始化表数据</h3><h4 id="初始化学生表数据"><a href="#初始化学生表数据" class="headerlink" title="初始化学生表数据"></a>初始化学生表数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">insert into student </span><br><span class="line">select &apos;1&apos;, &apos;刘一&apos;, 18, &apos;男&apos;</span><br><span class="line">union all select &apos;2&apos;, &apos;钱二&apos;, 19, &apos;女&apos; </span><br><span class="line">union all select &apos;3&apos;, &apos;张三&apos;, 17, &apos;男&apos;</span><br><span class="line">union all select &apos;4&apos;, &apos;李四&apos;, 18, &apos;女&apos; </span><br><span class="line">union all select &apos;5&apos;, &apos;王五&apos;, 17, &apos;男&apos;</span><br><span class="line">union all select &apos;6&apos;, &apos;赵六&apos;, 19, &apos;女&apos;;</span><br></pre></td></tr></table></figure>
+<h4 id="初始化教师表数据"><a href="#初始化教师表数据" class="headerlink" title="初始化教师表数据"></a>初始化教师表数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">insert into teacher</span><br><span class="line">select 1, &apos;叶平&apos;</span><br><span class="line">union all select 2, &apos;贺高&apos;</span><br><span class="line">union all select 3, &apos;杨艳&apos;</span><br><span class="line">union all select 4, &apos;周磊&apos;;</span><br></pre></td></tr></table></figure>
+<h4 id="初始化课程表数据"><a href="#初始化课程表数据" class="headerlink" title="初始化课程表数据"></a>初始化课程表数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">insert into course</span><br><span class="line">select &apos;1&apos;, &apos;语文&apos;, &apos;1&apos;</span><br><span class="line">union all select &apos;2&apos;, &apos;数学&apos;, &apos;2&apos;</span><br><span class="line">union all select &apos;3&apos;, &apos;英语&apos;, &apos;3&apos;</span><br><span class="line">union all select &apos;4&apos;, &apos;物理&apos;, &apos;4&apos;;</span><br></pre></td></tr></table></figure>
+<h4 id="初始化学生课程成绩表数据"><a href="#初始化学生课程成绩表数据" class="headerlink" title="初始化学生课程成绩表数据"></a>初始化学生课程成绩表数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">insert into sc </span><br><span class="line">select &apos;1&apos;, &apos;1&apos;, 56 </span><br><span class="line">union all select &apos;1&apos;, &apos;2&apos;, 78</span><br><span class="line">union all select &apos;1&apos;, &apos;3&apos;, 67</span><br><span class="line">union all select &apos;1&apos;, &apos;4&apos;, 58</span><br><span class="line">union all select &apos;2&apos;, &apos;1&apos;, 79</span><br><span class="line">union all select &apos;2&apos;, &apos;2&apos;, 81</span><br><span class="line">union all select &apos;2&apos;, &apos;3&apos;, 92</span><br><span class="line">union all select &apos;2&apos;, &apos;4&apos;, 68</span><br><span class="line">union all select &apos;3&apos;, &apos;1&apos;, 91</span><br><span class="line">union all select &apos;3&apos;, &apos;2&apos;, 47</span><br><span class="line">union all select &apos;3&apos;, &apos;3&apos;, 88</span><br><span class="line">union all select &apos;3&apos;, &apos;4&apos;, 56</span><br><span class="line">union all select &apos;4&apos;, &apos;2&apos;, 88</span><br><span class="line">union all select &apos;4&apos;, &apos;3&apos;, 90</span><br><span class="line">union all select &apos;4&apos;, &apos;4&apos;, 93</span><br><span class="line">union all select &apos;5&apos;, &apos;1&apos;, 46</span><br><span class="line">union all select &apos;5&apos;, &apos;3&apos;, 78</span><br><span class="line">union all select &apos;5&apos;, &apos;4&apos;, 53</span><br><span class="line">union all select &apos;6&apos;, &apos;1&apos;, 35</span><br><span class="line">union all select &apos;6&apos;, &apos;2&apos;, 68</span><br><span class="line">union all select &apos;6&apos;, &apos;4&apos;, 71;</span><br></pre></td></tr></table></figure>
+<h3 id="SQL-查询问题"><a href="#SQL-查询问题" class="headerlink" title="SQL 查询问题"></a>SQL 查询问题</h3><h4 id="查询-“1”-课程比-“2”-课程成绩高的所有学生的学号"><a href="#查询-“1”-课程比-“2”-课程成绩高的所有学生的学号" class="headerlink" title="查询 “1” 课程比 “2” 课程成绩高的所有学生的学号"></a>查询 “1” 课程比 “2” 课程成绩高的所有学生的学号</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select a.sid from (select sid,score from sc where cid = &apos;1&apos;) a, (select sid,score from sc where cid = &apos;2&apos;) b where a.score &gt; b.score and a.sid = b.sid;</span><br></pre></td></tr></table></figure>
+<h4 id="查询平均成绩大于-60-分的同学的学号和平均成绩"><a href="#查询平均成绩大于-60-分的同学的学号和平均成绩" class="headerlink" title="查询平均成绩大于 60 分的同学的学号和平均成绩"></a>查询平均成绩大于 60 分的同学的学号和平均成绩</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sid, avg(score) from sc group by sid having avg(score) &gt;  60;</span><br></pre></td></tr></table></figure>
+<h4 id="查询所有同学的学号、姓名、选课数、总成绩"><a href="#查询所有同学的学号、姓名、选课数、总成绩" class="headerlink" title="查询所有同学的学号、姓名、选课数、总成绩"></a>查询所有同学的学号、姓名、选课数、总成绩</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select s.sid,s.sname,count(sc.cid),sum(sc.score) from student s,sc sc where s.sid = sc.sid group by sid;</span><br><span class="line"></span><br><span class="line">select s.sid,s.sname,count(sc.cid),sum(sc.score) from student s left outer join sc on s.sid=sc.sid group by s.sid,sname;</span><br></pre></td></tr></table></figure>
+<h4 id="查询姓-“李”-的老师的个数"><a href="#查询姓-“李”-的老师的个数" class="headerlink" title="查询姓 “李” 的老师的个数"></a>查询姓 “李” 的老师的个数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select count(tid) from teacher where tname like &apos;李%&apos;;</span><br><span class="line"></span><br><span class="line">select count(distinct(tname)) from teacher where tname like &apos;李%&apos;;</span><br></pre></td></tr></table></figure>
+<h4 id="查询没学过-“叶平”-老师课的同学的学号、姓名"><a href="#查询没学过-“叶平”-老师课的同学的学号、姓名" class="headerlink" title="查询没学过 “叶平” 老师课的同学的学号、姓名"></a>查询没学过 “叶平” 老师课的同学的学号、姓名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select s.sid, s.sname from student s where s.sid not in (select distinct(sc.sid) from sc, course c, teacher t where sc.cid = c.cid and t.tid = c.tid and t.tname = &quot;叶平&quot;);</span><br></pre></td></tr></table></figure>
+<h4 id="查询学过-“1”-并且也学过编号-“2”-课程的同学的学号、姓名"><a href="#查询学过-“1”-并且也学过编号-“2”-课程的同学的学号、姓名" class="headerlink" title="查询学过 “1” 并且也学过编号 “2” 课程的同学的学号、姓名"></a>查询学过 “1” 并且也学过编号 “2” 课程的同学的学号、姓名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select sid, sname from student where sid in (select sid from sc where cid = &apos;2&apos; and sid in (select sid from sc where cid = &apos;1&apos;));</span><br><span class="line"></span><br><span class="line">select s.sid, s.sname from student s, sc where s.sid = sc.sid and sc.cid = &apos;1&apos; and exists (select * from sc as sc_2 where sc_2.sid = sc.sid and sc_2.cid = &apos;2&apos;);</span><br></pre></td></tr></table></figure>
+<h4 id="查询学过-“叶平”-老师所教的所有课的同学的学号、姓名"><a href="#查询学过-“叶平”-老师所教的所有课的同学的学号、姓名" class="headerlink" title="查询学过 “叶平” 老师所教的所有课的同学的学号、姓名"></a>查询学过 “叶平” 老师所教的所有课的同学的学号、姓名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select sid, sname from student</span><br><span class="line">where sid in (select sid from sc, course, teacher where sc.cid = course.cid and teacher.tid = course.tid and teacher.tname = &apos;叶平&apos;</span><br><span class="line">group by sid having count(sc.cid) = (select count(course.cid) from course, teacher where course.tid = teacher.tid and teacher.tname = &apos;叶平&apos;));</span><br></pre></td></tr></table></figure>
+<h4 id="查询所有课程成绩小于-60-分的同学的学号、姓名"><a href="#查询所有课程成绩小于-60-分的同学的学号、姓名" class="headerlink" title="查询所有课程成绩小于 60 分的同学的学号、姓名"></a>查询所有课程成绩小于 60 分的同学的学号、姓名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct(s.sid), s.sname from sc, student s where sc.sid = s.sid and sc.score &lt; 60;</span><br></pre></td></tr></table></figure>
+<h4 id="查询没有学全所有课的同学的学号、姓名"><a href="#查询没有学全所有课的同学的学号、姓名" class="headerlink" title="查询没有学全所有课的同学的学号、姓名"></a>查询没有学全所有课的同学的学号、姓名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select s.sid, s.sname from student s,sc where s.sid = sc.sid group by s.sid, s.sname having count(sc.cid) &lt; (select count(cid) from course);</span><br></pre></td></tr></table></figure>
+<h4 id="查询至少有一门课与学号为-“1”-的同学所学相同的同学的学号和姓名"><a href="#查询至少有一门课与学号为-“1”-的同学所学相同的同学的学号和姓名" class="headerlink" title="查询至少有一门课与学号为 “1” 的同学所学相同的同学的学号和姓名"></a>查询至少有一门课与学号为 “1” 的同学所学相同的同学的学号和姓名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct(s.sid), s.sname from student s, sc where s.sid = sc.sid and sc.cid in (select cid from sc where sc.sid = &apos;1&apos;);</span><br></pre></td></tr></table></figure>
+<h4 id="查询至少学过学号为-“1”-同学所有一门课的其他同学学号和姓名"><a href="#查询至少学过学号为-“1”-同学所有一门课的其他同学学号和姓名" class="headerlink" title="查询至少学过学号为 “1” 同学所有一门课的其他同学学号和姓名"></a>查询至少学过学号为 “1” 同学所有一门课的其他同学学号和姓名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct s.sid, s.sname from student s, sc where s.sid = sc.sid and s.sid != &apos;1&apos; and sc.cid in (select cid from sc where sc.sid = &apos;1&apos;);</span><br></pre></td></tr></table></figure>
+<h4 id="删除学习-“叶平”-老师课的-SC-表记录"><a href="#删除学习-“叶平”-老师课的-SC-表记录" class="headerlink" title="删除学习 “叶平” 老师课的 SC 表记录"></a>删除学习 “叶平” 老师课的 SC 表记录</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from sc where cid in (select distinct(cid) from (select sc.cid from sc, course c, teacher t where sc.cid = c.cid and c.tid = t.tid and t.tname = &apos;叶平&apos;) a);</span><br></pre></td></tr></table></figure>
+<h4 id="向-SC-表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号-“2”-课程的同学学号；2、插入-“2”-号课程的平均成绩"><a href="#向-SC-表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号-“2”-课程的同学学号；2、插入-“2”-号课程的平均成绩" class="headerlink" title="向 SC 表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号 “2” 课程的同学学号；2、插入 “2” 号课程的平均成绩"></a>向 SC 表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号 “2” 课程的同学学号；2、插入 “2” 号课程的平均成绩</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into sc (select sid, &apos;2&apos;, (select avg(score) from sc where cid = &apos;2&apos;) from student where sid not in (select sid from sc where cid = &apos;2&apos;));</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -652,7 +653,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Other/" rel="tag"><i class="fa fa-tag"></i> Other</a>
+            <a href="/tags/MySQL/" rel="tag"><i class="fa fa-tag"></i> MySQL</a>
+          
+            <a href="/tags/SQL/" rel="tag"><i class="fa fa-tag"></i> SQL</a>
           
         </div>
       
@@ -686,8 +689,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/12/心灵鸡汤/" rel="next" title="心灵鸡汤">
-                <i class="fa fa-chevron-left"></i> 心灵鸡汤
+              <a href="/2019/08/22/Java-setDaemon-true/" rel="next" title="Java setDaemon(true)">
+                <i class="fa fa-chevron-left"></i> Java setDaemon(true)
               </a>
             
           </div>
@@ -695,10 +698,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/22/Java-setDaemon-true/" rel="prev" title="Java setDaemon(true)">
-                Java setDaemon(true) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -747,8 +746,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1049,6 +1057,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建表"><span class="nav-number">1.</span> <span class="nav-text">创建表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建学生表"><span class="nav-number">1.1.</span> <span class="nav-text">创建学生表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建课程表"><span class="nav-number">1.2.</span> <span class="nav-text">创建课程表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建学生课程分数表"><span class="nav-number">1.3.</span> <span class="nav-text">创建学生课程分数表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建教师表"><span class="nav-number">1.4.</span> <span class="nav-text">创建教师表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化表数据"><span class="nav-number">2.</span> <span class="nav-text">初始化表数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化学生表数据"><span class="nav-number">2.1.</span> <span class="nav-text">初始化学生表数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化教师表数据"><span class="nav-number">2.2.</span> <span class="nav-text">初始化教师表数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化课程表数据"><span class="nav-number">2.3.</span> <span class="nav-text">初始化课程表数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化学生课程成绩表数据"><span class="nav-number">2.4.</span> <span class="nav-text">初始化学生课程成绩表数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL-查询问题"><span class="nav-number">3.</span> <span class="nav-text">SQL 查询问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查询-“1”-课程比-“2”-课程成绩高的所有学生的学号"><span class="nav-number">3.1.</span> <span class="nav-text">查询 “1” 课程比 “2” 课程成绩高的所有学生的学号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询平均成绩大于-60-分的同学的学号和平均成绩"><span class="nav-number">3.2.</span> <span class="nav-text">查询平均成绩大于 60 分的同学的学号和平均成绩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询所有同学的学号、姓名、选课数、总成绩"><span class="nav-number">3.3.</span> <span class="nav-text">查询所有同学的学号、姓名、选课数、总成绩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询姓-“李”-的老师的个数"><span class="nav-number">3.4.</span> <span class="nav-text">查询姓 “李” 的老师的个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询没学过-“叶平”-老师课的同学的学号、姓名"><span class="nav-number">3.5.</span> <span class="nav-text">查询没学过 “叶平” 老师课的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询学过-“1”-并且也学过编号-“2”-课程的同学的学号、姓名"><span class="nav-number">3.6.</span> <span class="nav-text">查询学过 “1” 并且也学过编号 “2” 课程的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询学过-“叶平”-老师所教的所有课的同学的学号、姓名"><span class="nav-number">3.7.</span> <span class="nav-text">查询学过 “叶平” 老师所教的所有课的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询所有课程成绩小于-60-分的同学的学号、姓名"><span class="nav-number">3.8.</span> <span class="nav-text">查询所有课程成绩小于 60 分的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询没有学全所有课的同学的学号、姓名"><span class="nav-number">3.9.</span> <span class="nav-text">查询没有学全所有课的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询至少有一门课与学号为-“1”-的同学所学相同的同学的学号和姓名"><span class="nav-number">3.10.</span> <span class="nav-text">查询至少有一门课与学号为 “1” 的同学所学相同的同学的学号和姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询至少学过学号为-“1”-同学所有一门课的其他同学学号和姓名"><span class="nav-number">3.11.</span> <span class="nav-text">查询至少学过学号为 “1” 同学所有一门课的其他同学学号和姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除学习-“叶平”-老师课的-SC-表记录"><span class="nav-number">3.12.</span> <span class="nav-text">删除学习 “叶平” 老师课的 SC 表记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向-SC-表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号-“2”-课程的同学学号；2、插入-“2”-号课程的平均成绩"><span class="nav-number">3.13.</span> <span class="nav-text">向 SC 表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号 “2” 课程的同学学号；2、插入 “2” 号课程的平均成绩</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
