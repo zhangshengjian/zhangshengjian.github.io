@@ -138,7 +138,7 @@
 <meta property="og:site_name" content="坚持到放弃">
 <meta property="og:description" content="创建表创建学生表1234567CREATE TABLE student(    sid VARCHAR(32),    sname VARCHAR(32),     sage INT,     ssex VARCHAR(8)); 创建课程表123456CREATE TABLE course(    cid VARCHAR(32),     cname VARCHAR(32),     tid VA">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-28T13:37:52.947Z">
+<meta property="og:updated_time" content="2019-09-04T14:34:57.665Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL 经典四表查询">
 <meta name="twitter:description" content="创建表创建学生表1234567CREATE TABLE student(    sid VARCHAR(32),    sname VARCHAR(32),     sage INT,     ssex VARCHAR(8)); 创建课程表123456CREATE TABLE course(    cid VARCHAR(32),     cname VARCHAR(32),     tid VA">
@@ -498,12 +498,24 @@
                 
               
 
-              <time title="创建时间：2019-08-28 21:09:00 / 修改时间：21:37:52" itemprop="dateCreated datePublished" datetime="2019-08-28T21:09:00+08:00">2019-08-28</time>
+              <time title="创建时间：2019-08-28 21:09:00" itemprop="dateCreated datePublished" datetime="2019-08-28T21:09:00+08:00">2019-08-28</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-04 22:34:57" itemprop="dateModified" datetime="2019-09-04T22:34:57+08:00">2019-09-04</time>
               
             
           </span>
@@ -583,6 +595,10 @@
 <h4 id="查询至少学过学号为-“1”-同学所有一门课的其他同学学号和姓名"><a href="#查询至少学过学号为-“1”-同学所有一门课的其他同学学号和姓名" class="headerlink" title="查询至少学过学号为 “1” 同学所有一门课的其他同学学号和姓名"></a>查询至少学过学号为 “1” 同学所有一门课的其他同学学号和姓名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct s.sid, s.sname from student s, sc where s.sid = sc.sid and s.sid != &apos;1&apos; and sc.cid in (select cid from sc where sc.sid = &apos;1&apos;);</span><br></pre></td></tr></table></figure>
 <h4 id="删除学习-“叶平”-老师课的-SC-表记录"><a href="#删除学习-“叶平”-老师课的-SC-表记录" class="headerlink" title="删除学习 “叶平” 老师课的 SC 表记录"></a>删除学习 “叶平” 老师课的 SC 表记录</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from sc where cid in (select distinct(cid) from (select sc.cid from sc, course c, teacher t where sc.cid = c.cid and c.tid = t.tid and t.tname = &apos;叶平&apos;) a);</span><br></pre></td></tr></table></figure>
 <h4 id="向-SC-表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号-“2”-课程的同学学号；2、插入-“2”-号课程的平均成绩"><a href="#向-SC-表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号-“2”-课程的同学学号；2、插入-“2”-号课程的平均成绩" class="headerlink" title="向 SC 表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号 “2” 课程的同学学号；2、插入 “2” 号课程的平均成绩"></a>向 SC 表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号 “2” 课程的同学学号；2、插入 “2” 号课程的平均成绩</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into sc (select sid, &apos;2&apos;, (select avg(score) from sc where cid = &apos;2&apos;) from student where sid not in (select sid from sc where cid = &apos;2&apos;));</span><br></pre></td></tr></table></figure>
+<h4 id="查询和-“2”-号的同学学习的课程完全相同的其他同学学号和姓名"><a href="#查询和-“2”-号的同学学习的课程完全相同的其他同学学号和姓名" class="headerlink" title="查询和 “2” 号的同学学习的课程完全相同的其他同学学号和姓名"></a>查询和 “2” 号的同学学习的课程完全相同的其他同学学号和姓名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sid, sname from student where sid in (select sid from sc where cid in (select cid from sc where sid = &apos;2&apos;) group by sid having count(*) = (select count(*) from sc where sid = &apos;2&apos;));</span><br></pre></td></tr></table></figure>
+<h4 id="把-“SC”-表中-“叶平”-老师教的课的成绩都更改为此课程的平均成绩"><a href="#把-“SC”-表中-“叶平”-老师教的课的成绩都更改为此课程的平均成绩" class="headerlink" title="把 “SC” 表中 “叶平” 老师教的课的成绩都更改为此课程的平均成绩"></a>把 “SC” 表中 “叶平” 老师教的课的成绩都更改为此课程的平均成绩</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update sc set score = (select a from (select avg(sc_2.score) a from sc sc_2 where sc_2.cid = sc.cid) x) where sc.cid in (select course.cid from course, teacher where course.tid = teacher.tid and teacher.tname = &apos;叶平&apos;);</span><br></pre></td></tr></table></figure>
+<h4 id="按平均成绩从高到低显示所有学生的-“语文”、”数学”、”英语”-三门的课程成绩，按如下形式显示：学生ID，语文，数学，英语，有效课程数，有效平均分"><a href="#按平均成绩从高到低显示所有学生的-“语文”、”数学”、”英语”-三门的课程成绩，按如下形式显示：学生ID，语文，数学，英语，有效课程数，有效平均分" class="headerlink" title="按平均成绩从高到低显示所有学生的 “语文”、”数学”、”英语” 三门的课程成绩，按如下形式显示：学生ID，语文，数学，英语，有效课程数，有效平均分"></a>按平均成绩从高到低显示所有学生的 “语文”、”数学”、”英语” 三门的课程成绩，按如下形式显示：学生ID，语文，数学，英语，有效课程数，有效平均分</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sid as 学生ID,(select score from sc where sc.sid = t.sid and cid = &apos;1&apos;) as 语文,(select score from sc where sc.sid = t.sid and cid = &apos;2&apos;) as 数学,(select score from sc where sc.sid = t.sid and cid = &apos;3&apos;) as 英语,count(*) as 有效课程数, avg(t.score) as 有效平均成绩 from sc as tgroup by sid order by avg(t.score);</span><br></pre></td></tr></table></figure>
+<h4 id="查询各科成绩最高和最低的分：以如下形式显示：课程ID，最高分，最低分"><a href="#查询各科成绩最高和最低的分：以如下形式显示：课程ID，最高分，最低分" class="headerlink" title="查询各科成绩最高和最低的分：以如下形式显示：课程ID，最高分，最低分"></a>查询各科成绩最高和最低的分：以如下形式显示：课程ID，最高分，最低分</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select cid as 课程ID, max(score) as 最高分, min(score) as 最低分 from sc group by cid;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -699,6 +715,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/09/04/RESTful-API-设计/" rel="prev" title="RESTful API 设计">
+                RESTful API 设计 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -773,7 +793,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">37</span>
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -834,7 +854,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">22</span>
+                      
+                    
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -939,7 +961,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">43</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">45</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1068,7 +1094,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建表"><span class="nav-number">1.</span> <span class="nav-text">创建表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建学生表"><span class="nav-number">1.1.</span> <span class="nav-text">创建学生表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建课程表"><span class="nav-number">1.2.</span> <span class="nav-text">创建课程表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建学生课程分数表"><span class="nav-number">1.3.</span> <span class="nav-text">创建学生课程分数表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建教师表"><span class="nav-number">1.4.</span> <span class="nav-text">创建教师表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化表数据"><span class="nav-number">2.</span> <span class="nav-text">初始化表数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化学生表数据"><span class="nav-number">2.1.</span> <span class="nav-text">初始化学生表数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化教师表数据"><span class="nav-number">2.2.</span> <span class="nav-text">初始化教师表数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化课程表数据"><span class="nav-number">2.3.</span> <span class="nav-text">初始化课程表数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化学生课程成绩表数据"><span class="nav-number">2.4.</span> <span class="nav-text">初始化学生课程成绩表数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL-查询问题"><span class="nav-number">3.</span> <span class="nav-text">SQL 查询问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查询-“1”-课程比-“2”-课程成绩高的所有学生的学号"><span class="nav-number">3.1.</span> <span class="nav-text">查询 “1” 课程比 “2” 课程成绩高的所有学生的学号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询平均成绩大于-60-分的同学的学号和平均成绩"><span class="nav-number">3.2.</span> <span class="nav-text">查询平均成绩大于 60 分的同学的学号和平均成绩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询所有同学的学号、姓名、选课数、总成绩"><span class="nav-number">3.3.</span> <span class="nav-text">查询所有同学的学号、姓名、选课数、总成绩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询姓-“李”-的老师的个数"><span class="nav-number">3.4.</span> <span class="nav-text">查询姓 “李” 的老师的个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询没学过-“叶平”-老师课的同学的学号、姓名"><span class="nav-number">3.5.</span> <span class="nav-text">查询没学过 “叶平” 老师课的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询学过-“1”-并且也学过编号-“2”-课程的同学的学号、姓名"><span class="nav-number">3.6.</span> <span class="nav-text">查询学过 “1” 并且也学过编号 “2” 课程的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询学过-“叶平”-老师所教的所有课的同学的学号、姓名"><span class="nav-number">3.7.</span> <span class="nav-text">查询学过 “叶平” 老师所教的所有课的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询所有课程成绩小于-60-分的同学的学号、姓名"><span class="nav-number">3.8.</span> <span class="nav-text">查询所有课程成绩小于 60 分的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询没有学全所有课的同学的学号、姓名"><span class="nav-number">3.9.</span> <span class="nav-text">查询没有学全所有课的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询至少有一门课与学号为-“1”-的同学所学相同的同学的学号和姓名"><span class="nav-number">3.10.</span> <span class="nav-text">查询至少有一门课与学号为 “1” 的同学所学相同的同学的学号和姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询至少学过学号为-“1”-同学所有一门课的其他同学学号和姓名"><span class="nav-number">3.11.</span> <span class="nav-text">查询至少学过学号为 “1” 同学所有一门课的其他同学学号和姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除学习-“叶平”-老师课的-SC-表记录"><span class="nav-number">3.12.</span> <span class="nav-text">删除学习 “叶平” 老师课的 SC 表记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向-SC-表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号-“2”-课程的同学学号；2、插入-“2”-号课程的平均成绩"><span class="nav-number">3.13.</span> <span class="nav-text">向 SC 表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号 “2” 课程的同学学号；2、插入 “2” 号课程的平均成绩</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建表"><span class="nav-number">1.</span> <span class="nav-text">创建表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建学生表"><span class="nav-number">1.1.</span> <span class="nav-text">创建学生表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建课程表"><span class="nav-number">1.2.</span> <span class="nav-text">创建课程表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建学生课程分数表"><span class="nav-number">1.3.</span> <span class="nav-text">创建学生课程分数表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建教师表"><span class="nav-number">1.4.</span> <span class="nav-text">创建教师表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化表数据"><span class="nav-number">2.</span> <span class="nav-text">初始化表数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化学生表数据"><span class="nav-number">2.1.</span> <span class="nav-text">初始化学生表数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化教师表数据"><span class="nav-number">2.2.</span> <span class="nav-text">初始化教师表数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化课程表数据"><span class="nav-number">2.3.</span> <span class="nav-text">初始化课程表数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化学生课程成绩表数据"><span class="nav-number">2.4.</span> <span class="nav-text">初始化学生课程成绩表数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL-查询问题"><span class="nav-number">3.</span> <span class="nav-text">SQL 查询问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查询-“1”-课程比-“2”-课程成绩高的所有学生的学号"><span class="nav-number">3.1.</span> <span class="nav-text">查询 “1” 课程比 “2” 课程成绩高的所有学生的学号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询平均成绩大于-60-分的同学的学号和平均成绩"><span class="nav-number">3.2.</span> <span class="nav-text">查询平均成绩大于 60 分的同学的学号和平均成绩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询所有同学的学号、姓名、选课数、总成绩"><span class="nav-number">3.3.</span> <span class="nav-text">查询所有同学的学号、姓名、选课数、总成绩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询姓-“李”-的老师的个数"><span class="nav-number">3.4.</span> <span class="nav-text">查询姓 “李” 的老师的个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询没学过-“叶平”-老师课的同学的学号、姓名"><span class="nav-number">3.5.</span> <span class="nav-text">查询没学过 “叶平” 老师课的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询学过-“1”-并且也学过编号-“2”-课程的同学的学号、姓名"><span class="nav-number">3.6.</span> <span class="nav-text">查询学过 “1” 并且也学过编号 “2” 课程的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询学过-“叶平”-老师所教的所有课的同学的学号、姓名"><span class="nav-number">3.7.</span> <span class="nav-text">查询学过 “叶平” 老师所教的所有课的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询所有课程成绩小于-60-分的同学的学号、姓名"><span class="nav-number">3.8.</span> <span class="nav-text">查询所有课程成绩小于 60 分的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询没有学全所有课的同学的学号、姓名"><span class="nav-number">3.9.</span> <span class="nav-text">查询没有学全所有课的同学的学号、姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询至少有一门课与学号为-“1”-的同学所学相同的同学的学号和姓名"><span class="nav-number">3.10.</span> <span class="nav-text">查询至少有一门课与学号为 “1” 的同学所学相同的同学的学号和姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询至少学过学号为-“1”-同学所有一门课的其他同学学号和姓名"><span class="nav-number">3.11.</span> <span class="nav-text">查询至少学过学号为 “1” 同学所有一门课的其他同学学号和姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除学习-“叶平”-老师课的-SC-表记录"><span class="nav-number">3.12.</span> <span class="nav-text">删除学习 “叶平” 老师课的 SC 表记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向-SC-表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号-“2”-课程的同学学号；2、插入-“2”-号课程的平均成绩"><span class="nav-number">3.13.</span> <span class="nav-text">向 SC 表中插入一些记录，这些记录要求符合以下条件：1、没有上过编号 “2” 课程的同学学号；2、插入 “2” 号课程的平均成绩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询和-“2”-号的同学学习的课程完全相同的其他同学学号和姓名"><span class="nav-number">3.14.</span> <span class="nav-text">查询和 “2” 号的同学学习的课程完全相同的其他同学学号和姓名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#把-“SC”-表中-“叶平”-老师教的课的成绩都更改为此课程的平均成绩"><span class="nav-number">3.15.</span> <span class="nav-text">把 “SC” 表中 “叶平” 老师教的课的成绩都更改为此课程的平均成绩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按平均成绩从高到低显示所有学生的-“语文”、”数学”、”英语”-三门的课程成绩，按如下形式显示：学生ID，语文，数学，英语，有效课程数，有效平均分"><span class="nav-number">3.16.</span> <span class="nav-text">按平均成绩从高到低显示所有学生的 “语文”、”数学”、”英语” 三门的课程成绩，按如下形式显示：学生ID，语文，数学，英语，有效课程数，有效平均分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询各科成绩最高和最低的分：以如下形式显示：课程ID，最高分，最低分"><span class="nav-number">3.17.</span> <span class="nav-text">查询各科成绩最高和最低的分：以如下形式显示：课程ID，最高分，最低分</span></a></li></ol></li></ol></div>
             
 
           </div>

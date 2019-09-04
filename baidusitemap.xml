@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zhangshengjian.github.io/2019/09/04/Oracle-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2019-09-04</lastmod>
+  </url>  <url>
+    <loc>https://zhangshengjian.github.io/2019/09/04/RESTful-API-%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2019-09-04</lastmod>
+  </url>  <url>
+    <loc>https://zhangshengjian.github.io/2019/08/28/MySQL-%E7%BB%8F%E5%85%B8%E5%9B%9B%E8%A1%A8%E6%9F%A5%E8%AF%A2/</loc>
+    <lastmod>2019-09-04</lastmod>
+  </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/08/12/%E6%8A%80%E6%9C%AF-%E6%A6%82%E5%BF%B5%E7%AF%87/</loc>
     <lastmod>2019-08-28</lastmod>
   </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/07/12/MySQL-%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2019-08-28</lastmod>
-  </url>  <url>
-    <loc>https://zhangshengjian.github.io/2019/08/28/MySQL-%E7%BB%8F%E5%85%B8%E5%9B%9B%E8%A1%A8%E6%9F%A5%E8%AF%A2/</loc>
     <lastmod>2019-08-28</lastmod>
   </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/06/27/Java-%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
