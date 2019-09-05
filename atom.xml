@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangshengjian.github.io/"/>
-  <updated>2019-09-04T14:55:48.476Z</updated>
+  <updated>2019-09-05T12:58:09.083Z</updated>
   <id>https://zhangshengjian.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java 8 Stream</title>
+    <link href="https://zhangshengjian.github.io/2019/09/05/Java-8-Stream/"/>
+    <id>https://zhangshengjian.github.io/2019/09/05/Java-8-Stream/</id>
+    <published>2019-09-05T12:56:00.000Z</published>
+    <updated>2019-09-05T12:58:09.083Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="什么是-Stream"><a href="#什么是-Stream" class="headerlink" title="什么是 Stream"></a>什么是 Stream</h3><p>Stream（流）是一个来自数据源的元素队列并支持聚合操作。<br>在 Java 中，集合和数组是我们经常会用到的数据结构，但是在 Java 8 之前，集合和数组的处理并不是很便捷，<br>这一问题在 Java 8 中得到了改善，Java 8 API 添加了一个新的抽象称为流 Stream。<br>Stream 使用一种类似用 SQL 语句从数据库查询数据的直观方式来提供一种对 Java 集合运算和表达的高阶抽象。<br>Stream API 可以极大提高 Java 程序员的生产力，让程序员写出高效率、干净、简洁的代码。<br>流的处理，主要有三种关键性操作：分别是流的创建、中间操作（intermediate operation）以及最终操作（terminal operation）</p><h3 id="Stream-的创建"><a href="#Stream-的创建" class="headerlink" title="Stream 的创建"></a>Stream 的创建</h3><h4 id="通过已有的数组来创建流"><a href="#通过已有的数组来创建流" class="headerlink" title="通过已有的数组来创建流"></a>通过已有的数组来创建流</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String[] arr = new String[] &#123;&quot;ab&quot;, &quot;cd&quot;, &quot;ef&quot;&#125;;</span><br><span class="line">Stream&lt;String&gt; arrStream = Arrays.stream(arr);</span><br></pre></td></tr></table></figure><h4 id="通过已有的集合来创建流"><a href="#通过已有的集合来创建流" class="headerlink" title="通过已有的集合来创建流"></a>通过已有的集合来创建流</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; strings = Arrays.asList(&quot;Hello&quot;, &quot;World&quot;, &quot;Hello World&quot;, &quot;Hello Stream&quot;);</span><br><span class="line">Stream&lt;String&gt; stream = strings.stream();</span><br></pre></td></tr></table></figure><h4 id="通过-Stream-创建流"><a href="#通过-Stream-创建流" class="headerlink" title="通过 Stream 创建流"></a>通过 Stream 创建流</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;String&gt; stream = Stream.of(&quot;Hello&quot;, &quot;World&quot;, &quot;Hello World&quot;, &quot;Hello Stream&quot;);</span><br></pre></td></tr></table></figure><h3 id="Stream-中间操作"><a href="#Stream-中间操作" class="headerlink" title="Stream 中间操作"></a>Stream 中间操作</h3><p>中间操作总是会惰式执行，调用中间操作只会生成一个标记了该操作的新 stream。</p><h4 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h4><p>filter 用于通过设置的条件过滤出元素，以下代码使用 filter 方法过滤掉空字符串：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; strings = Arrays.asList(&quot;Hello&quot;, &quot;&quot;, &quot;World&quot;, &quot;Hello World&quot;, &quot;Hello Stream&quot;);</span><br><span class="line">strings.stream().filter(s -&gt; !s.isEmpty()).forEach(System.out::println);</span><br></pre></td></tr></table></figure><h4 id="map"><a href="#map" class="headerlink" title="map"></a>map</h4><p>map 用于映射每个元素到对应的结果，以下代码片段使用 map 输出了元素对应的平方数：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);</span><br><span class="line">numbers.stream().map(i -&gt; i * i).forEach(System.out::println);</span><br></pre></td></tr></table></figure><h4 id="limit-skip"><a href="#limit-skip" class="headerlink" title="limit/skip"></a>limit/skip</h4><p>limit/skip limit 返回 Stream 的前面 n 个元素；skip 则是扔掉前 n 个元素。以下代码片段使用 limit 方法保留4个元素：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);</span><br><span class="line">numbers.stream().limit(4).forEach(System.out::println);</span><br><span class="line">numbers.stream().skip(4).forEach(System.out::println);</span><br></pre></td></tr></table></figure><h4 id="sorted"><a href="#sorted" class="headerlink" title="sorted"></a>sorted</h4><p>sorted 用于对流进行排序</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);</span><br><span class="line">numbers.stream().sorted().forEach(System.out::println);</span><br></pre></td></tr></table></figure><h4 id="distinct"><a href="#distinct" class="headerlink" title="distinct"></a>distinct</h4><p>distinct 主要用来去重</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);</span><br><span class="line">numbers.stream().distinct().forEach(System.out::println);</span><br></pre></td></tr></table></figure><h3 id="Stream-最终操作"><a href="#Stream-最终操作" class="headerlink" title="Stream 最终操作"></a>Stream 最终操作</h3><blockquote><p>最终操作会触发实际计算，计算发生时会把所有中间操作积攒的操作以 pipeline 的方式执行，这样可以减少迭代次数。计算完成之后 stream 就会失效。</p></blockquote><p>最终操作会消耗流，产生一个最终结果。也就是说，在最终操作之后，不能再次使用流，也不能在使用任何中间操作，否则将抛出异常。</p><p>常用的最终操作如下：</p><h4 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h4><p>forEach 迭代流中的每个数据</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Random random = new Random();</span><br><span class="line">random.ints().limit(10).forEach(System.out::println);</span><br></pre></td></tr></table></figure><h4 id="count"><a href="#count" class="headerlink" title="count"></a>count</h4><p>count 用来统计流中的元素个数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; strings = Arrays.asList(&quot;Hello&quot;, &quot;Stream&quot;);</span><br><span class="line">System.out.println(strings.stream().count());</span><br></pre></td></tr></table></figure><h4 id="collect"><a href="#collect" class="headerlink" title="collect"></a>collect</h4><p>collect 一个归约操作，可以接受各种做法作为参数，将流中的元素累积成一个汇总结果</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; strings = Arrays.asList(&quot;Hello&quot;, &quot;World&quot;, &quot;Hello Stream&quot;);</span><br><span class="line">strings = strings.stream().filter(s -&gt; s.startsWith(&quot;Hello&quot;)).collect(Collectors.toList());</span><br><span class="line">System.out.println(strings);</span><br></pre></td></tr></table></figure><h3 id="并行（parallel）程序"><a href="#并行（parallel）程序" class="headerlink" title="并行（parallel）程序"></a>并行（parallel）程序</h3><p>parallelStream 是流并行处理程序的代替方法。以下实例我们使用 parallelStream 来输出空字符串的数量：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; strings = Arrays.asList(&quot;abc&quot;, &quot;&quot;, &quot;bc&quot;, &quot;efg&quot;, &quot;abcd&quot;,&quot;&quot;, &quot;jkl&quot;);</span><br><span class="line">// 获取空字符串的数量</span><br><span class="line">int count = strings.parallelStream().filter(string -&gt; string.isEmpty()).count();</span><br></pre></td></tr></table></figure><h3 id="Collectors"><a href="#Collectors" class="headerlink" title="Collectors"></a>Collectors</h3><p>Collectors 类实现了很多归约操作，例如将流转换成集合和聚合元素。Collectors 可用于返回列表或字符串：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; strings = Arrays.asList(&quot;abc&quot;, &quot;&quot;, &quot;bc&quot;, &quot;efg&quot;, &quot;abcd&quot;, &quot;&quot;, &quot;jkl&quot;);</span><br><span class="line">List&lt;String&gt; filtered = strings.stream().filter(string -&gt; !string.isEmpty()).collect(Collectors.toList());</span><br><span class="line">System.out.println(&quot;筛选列表: &quot; + filtered);</span><br><span class="line">String mergedString = strings.stream().filter(string -&gt; !string.isEmpty()).collect(Collectors.joining(&quot;, &quot;));</span><br><span class="line">System.out.println(&quot;合并字符串: &quot; + mergedString);</span><br></pre></td></tr></table></figure><h3 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h3><p>一些产生统计结果的收集器也非常有用。它们主要用于 int、double、long 等基本类型上，它们可以用来产生类似如下的统计结果。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);</span><br><span class="line">IntSummaryStatistics stats = numbers.stream().mapToInt((x) -&gt; x).summaryStatistics();</span><br><span class="line"></span><br><span class="line">System.out.println(&quot;列表中最大的数 : &quot; + stats.getMax());</span><br><span class="line">System.out.println(&quot;列表中最小的数 : &quot; + stats.getMin());</span><br><span class="line">System.out.println(&quot;所有数之和 : &quot; + stats.getSum());</span><br><span class="line">System.out.println(&quot;平均数 : &quot; + stats.getAverage());</span><br></pre></td></tr></table></figure><h3 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h3><ul><li><a href="https://blog.csdn.net/chenhao_c_h/article/details/80691284" target="_blank" rel="noopener">https://blog.csdn.net/chenhao_c_h/article/details/80691284</a></li><li><a href="https://blog.csdn.net/papima/article/details/81808445" target="_blank" rel="noopener">https://blog.csdn.net/papima/article/details/81808445</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;什么是-Stream&quot;&gt;&lt;a href=&quot;#什么是-Stream&quot; class=&quot;headerlink&quot; title=&quot;什么是 Stream&quot;&gt;&lt;/a&gt;什么是 Stream&lt;/h3&gt;&lt;p&gt;Stream（流）是一个来自数据源的元素队列并支持聚合操作。&lt;br&gt;在 Ja
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://zhangshengjian.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://zhangshengjian.github.io/tags/Java/"/>
+    
+      <category term="Stream" scheme="https://zhangshengjian.github.io/tags/Stream/"/>
+    
+  </entry>
   
   <entry>
     <title>Oracle 常见问题以及解决方案</title>
@@ -546,44 +573,6 @@
       <category term="MySQL" scheme="https://zhangshengjian.github.io/tags/MySQL/"/>
     
       <category term="架构" scheme="https://zhangshengjian.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MongoDB 常用命令</title>
-    <link href="https://zhangshengjian.github.io/2019/07/13/MangoDB-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://zhangshengjian.github.io/2019/07/13/MangoDB-常用命令/</id>
-    <published>2019-07-13T15:15:00.000Z</published>
-    <updated>2019-07-13T15:32:14.157Z</updated>
-    
-    <content type="html"><![CDATA[<table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>mongod -version</td><td>查看 MangoDB 版本</td></tr><tr><td>mongod –dbpath data –logpath log/mongod.log –logappend –fork</td><td>脚本启动或配置文件启动</td></tr><tr><td>–dbpath $dbpath</td><td>数据库数据文件路径</td></tr><tr><td>–logpath $logpath</td><td>日志文件的路径</td></tr><tr><td>–logappend</td><td>以追加的方式打开文件</td></tr><tr><td>–fork</td><td>将数据库服务放在后台运行</td></tr></tbody></table><p><img src="/images/pasted-31.png" alt="图一"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;命令&lt;/th&gt;
-&lt;th&gt;解释&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;mongod -version&lt;/td&gt;
-&lt;td&gt;查看 MangoDB 版本&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;mong
-      
-    
-    </summary>
-    
-      <category term="MongoDB" scheme="https://zhangshengjian.github.io/categories/MongoDB/"/>
-    
-    
-      <category term="MongoDB" scheme="https://zhangshengjian.github.io/tags/MongoDB/"/>
     
   </entry>
   
