@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangshengjian.github.io/"/>
-  <updated>2019-09-09T13:15:29.242Z</updated>
+  <updated>2019-09-05T12:58:09.083Z</updated>
   <id>https://zhangshengjian.github.io/</id>
   
   <author>
@@ -15,62 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>VUE 入门</title>
-    <link href="https://zhangshengjian.github.io/2019/09/09/VUE-%E5%85%A5%E9%97%A8/"/>
-    <id>https://zhangshengjian.github.io/2019/09/09/VUE-入门/</id>
-    <published>2019-09-09T13:13:00.000Z</published>
-    <updated>2019-09-09T13:15:29.242Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>官方网址 <a href="https://cn.vuejs.org/" target="_blank" rel="noopener">https://cn.vuejs.org/</a></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;官方网址 &lt;a href=&quot;https://cn.vuejs.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://cn.vuejs.org/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-      
-    
-    </summary>
-    
-      <category term="VUE" scheme="https://zhangshengjian.github.io/categories/VUE/"/>
-    
-    
-      <category term="VUE" scheme="https://zhangshengjian.github.io/tags/VUE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gradle 入门</title>
-    <link href="https://zhangshengjian.github.io/2019/09/09/Gradle-%E5%85%A5%E9%97%A8/"/>
-    <id>https://zhangshengjian.github.io/2019/09/09/Gradle-入门/</id>
-    <published>2019-09-09T12:56:00.000Z</published>
-    <updated>2019-09-09T13:13:06.858Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>官方网址 <a href="https://gradle.org/" target="_blank" rel="noopener">https://gradle.org/</a></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;官方网址 &lt;a href=&quot;https://gradle.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://gradle.org/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-      
-    
-    </summary>
-    
-      <category term="Gradle" scheme="https://zhangshengjian.github.io/categories/Gradle/"/>
-    
-    
-      <category term="Gradle" scheme="https://zhangshengjian.github.io/tags/Gradle/"/>
-    
-  </entry>
   
   <entry>
     <title>Java 8 Stream</title>
@@ -572,6 +516,63 @@
     
     
       <category term="Spring Security" scheme="https://zhangshengjian.github.io/tags/Spring-Security/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Swagger-UI</title>
+    <link href="https://zhangshengjian.github.io/2019/07/15/Swagger-UI/"/>
+    <id>https://zhangshengjian.github.io/2019/07/15/Swagger-UI/</id>
+    <published>2019-07-15T07:45:00.000Z</published>
+    <updated>2019-07-15T08:47:25.306Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Swagger-UI-简介"><a href="#Swagger-UI-简介" class="headerlink" title="Swagger-UI 简介"></a>Swagger-UI 简介</h4><blockquote><p>Swagger-UI 是 HTML, Javascript, CSS 的一个集合，可以动态地根据注解生成在线 API 文档。</p></blockquote><h4 id="Swagger-UI-常用注解"><a href="#Swagger-UI-常用注解" class="headerlink" title="Swagger-UI 常用注解"></a>Swagger-UI 常用注解</h4><ul><li>@Api：用于修饰 Controller 类，生成 Controller 相关文档信息</li><li>@ApiOperation：用于修饰 Controller 类中的方法，生成接口方法相关文档信息</li><li>@ApiParam：用于修饰接口中的参数，生成接口参数相关文档信息</li><li>@ApiModelProperty：用于修饰实体类的属性，当实体类是请求参数或返回结果时，直接生成相关文档信息</li></ul><h4 id="接口文档访问地址"><a href="#接口文档访问地址" class="headerlink" title="接口文档访问地址"></a>接口文档访问地址</h4><blockquote><p><a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html</a></p></blockquote><h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><blockquote><p><a href="https://juejin.im/post/5cf9035cf265da1bb47d54f8" target="_blank" rel="noopener">https://juejin.im/post/5cf9035cf265da1bb47d54f8</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Swagger-UI-简介&quot;&gt;&lt;a href=&quot;#Swagger-UI-简介&quot; class=&quot;headerlink&quot; title=&quot;Swagger-UI 简介&quot;&gt;&lt;/a&gt;Swagger-UI 简介&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;Swagger-UI 是 
+      
+    
+    </summary>
+    
+      <category term="Swagger-UI" scheme="https://zhangshengjian.github.io/categories/Swagger-UI/"/>
+    
+    
+      <category term="Swagger-UI" scheme="https://zhangshengjian.github.io/tags/Swagger-UI/"/>
+    
+      <category term="Api" scheme="https://zhangshengjian.github.io/tags/Api/"/>
+    
+      <category term="Document" scheme="https://zhangshengjian.github.io/tags/Document/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>架构篇 - MySQL数据库连接参数详解</title>
+    <link href="https://zhangshengjian.github.io/2019/07/15/%E6%9E%B6%E6%9E%84%E7%AF%87-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://zhangshengjian.github.io/2019/07/15/架构篇-MySQL数据库连接参数详解/</id>
+    <published>2019-07-15T01:31:00.000Z</published>
+    <updated>2019-07-15T08:27:21.963Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="MySQL-数据库连接"><a href="#MySQL-数据库连接" class="headerlink" title="MySQL 数据库连接"></a>MySQL 数据库连接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jdbc:mysql://localhost:3306/mall?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai</span><br></pre></td></tr></table></figure><table><thead><tr><th>参数</th><th>解释</th></tr></thead><tbody><tr><td>useUnicode=true&amp;characterEncoding=utf-8</td><td>指定字符编码、解码格式</td></tr><tr><td>serverTimezone=Asia/Shanghai</td><td>时区使用中国标准时间</td></tr></tbody></table><h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><blockquote><p><a href="https://blog.csdn.net/yaphets__yj/article/details/77774874" target="_blank" rel="noopener">https://blog.csdn.net/yaphets__yj/article/details/77774874</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;MySQL-数据库连接&quot;&gt;&lt;a href=&quot;#MySQL-数据库连接&quot; class=&quot;headerlink&quot; title=&quot;MySQL 数据库连接&quot;&gt;&lt;/a&gt;MySQL 数据库连接&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="https://zhangshengjian.github.io/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="https://zhangshengjian.github.io/tags/MySQL/"/>
+    
+      <category term="架构" scheme="https://zhangshengjian.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
     
   </entry>
   
