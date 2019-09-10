@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zhangshengjian.github.io/2019/07/23/Intellij-IDEA/</loc>
+    <lastmod>2019-09-10</lastmod>
+  </url>  <url>
+    <loc>https://zhangshengjian.github.io/2019/09/09/VUE-%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2019-09-09</lastmod>
+  </url>  <url>
+    <loc>https://zhangshengjian.github.io/2019/09/09/Gradle-%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2019-09-09</lastmod>
+  </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/09/05/Java-8-Stream/</loc>
     <lastmod>2019-09-05</lastmod>
   </url>  <url>
@@ -27,9 +36,6 @@
   </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/08/12/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/</loc>
     <lastmod>2019-08-21</lastmod>
-  </url>  <url>
-    <loc>https://zhangshengjian.github.io/2019/07/23/Intellij-IDEA/</loc>
-    <lastmod>2019-08-14</lastmod>
   </url>  <url>
     <loc>https://zhangshengjian.github.io/2019/08/04/Elasticsearch-Demo/</loc>
     <lastmod>2019-08-04</lastmod>
