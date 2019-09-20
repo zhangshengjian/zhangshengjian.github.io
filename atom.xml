@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangshengjian.github.io/"/>
-  <updated>2019-09-19T00:27:03.909Z</updated>
+  <updated>2019-09-20T13:04:41.072Z</updated>
   <id>https://zhangshengjian.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gradle 命令</title>
+    <link href="https://zhangshengjian.github.io/2019/09/20/Gradle-%E5%91%BD%E4%BB%A4/"/>
+    <id>https://zhangshengjian.github.io/2019/09/20/Gradle-命令/</id>
+    <published>2019-09-20T12:56:00.000Z</published>
+    <updated>2019-09-20T13:04:41.072Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Gradle 常用命令</p></blockquote><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>gradle -v</td><td>版本号</td></tr><tr><td>gradle clean</td><td>清除 build 文件夹</td></tr><tr><td>gradle build</td><td>检查依赖并打包</td></tr><tr><td>gradle assembleDebug</td><td>编译打包 Debug 包</td></tr><tr><td>gradle assembleRelease</td><td>编译打包 Release 包</td></tr><tr><td>gradle installRelease</td><td>打包并安装 Release 包</td></tr><tr><td>gradle unstallRelease</td><td>卸载 Release 包</td></tr><tr><td>gradle dependencies</td><td>查看依赖图表</td></tr><tr><td>gradle clean build -x test</td><td>跳过测试编译</td></tr><tr><td>gradle –profile build</td><td>分析构建任务</td></tr><tr><td>gradle build –dry-run</td><td>编译并不执行任务</td></tr><tr><td>gradle install</td><td>安置项目 jar 包到本地 Maven 仓库</td></tr><tr><td>gradle tasks</td><td>查看 Gradle 任务</td></tr><tr><td>gradle tasks –all</td><td>查看所有 Gradle 任务</td></tr><tr><td>gradle build –daemon</td><td>使用 Gradle 守护程序(Daemon)</td></tr><tr><td>gradle build –offline</td><td>用离线模式运行</td></tr><tr><td>gradle clean build –refresh-dependencies</td><td>刷新 Gradle 依赖缓存</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Gradle 常用命令&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;解释&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;gradle -v&lt;/td&gt;
+&lt;t
+      
+    
+    </summary>
+    
+      <category term="Gradle" scheme="https://zhangshengjian.github.io/categories/Gradle/"/>
+    
+    
+      <category term="Gradle" scheme="https://zhangshengjian.github.io/tags/Gradle/"/>
+    
+  </entry>
   
   <entry>
     <title>SVN 使用问题记录</title>
@@ -541,36 +579,6 @@
     
     
       <category term="Spring Security" scheme="https://zhangshengjian.github.io/tags/Spring-Security/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Swagger-UI</title>
-    <link href="https://zhangshengjian.github.io/2019/07/15/Swagger-UI/"/>
-    <id>https://zhangshengjian.github.io/2019/07/15/Swagger-UI/</id>
-    <published>2019-07-15T07:45:00.000Z</published>
-    <updated>2019-07-15T08:47:25.306Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Swagger-UI-简介"><a href="#Swagger-UI-简介" class="headerlink" title="Swagger-UI 简介"></a>Swagger-UI 简介</h4><blockquote><p>Swagger-UI 是 HTML, Javascript, CSS 的一个集合，可以动态地根据注解生成在线 API 文档。</p></blockquote><h4 id="Swagger-UI-常用注解"><a href="#Swagger-UI-常用注解" class="headerlink" title="Swagger-UI 常用注解"></a>Swagger-UI 常用注解</h4><ul><li>@Api：用于修饰 Controller 类，生成 Controller 相关文档信息</li><li>@ApiOperation：用于修饰 Controller 类中的方法，生成接口方法相关文档信息</li><li>@ApiParam：用于修饰接口中的参数，生成接口参数相关文档信息</li><li>@ApiModelProperty：用于修饰实体类的属性，当实体类是请求参数或返回结果时，直接生成相关文档信息</li></ul><h4 id="接口文档访问地址"><a href="#接口文档访问地址" class="headerlink" title="接口文档访问地址"></a>接口文档访问地址</h4><blockquote><p><a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html</a></p></blockquote><h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><blockquote><p><a href="https://juejin.im/post/5cf9035cf265da1bb47d54f8" target="_blank" rel="noopener">https://juejin.im/post/5cf9035cf265da1bb47d54f8</a></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;Swagger-UI-简介&quot;&gt;&lt;a href=&quot;#Swagger-UI-简介&quot; class=&quot;headerlink&quot; title=&quot;Swagger-UI 简介&quot;&gt;&lt;/a&gt;Swagger-UI 简介&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;Swagger-UI 是 
-      
-    
-    </summary>
-    
-      <category term="Swagger-UI" scheme="https://zhangshengjian.github.io/categories/Swagger-UI/"/>
-    
-    
-      <category term="Swagger-UI" scheme="https://zhangshengjian.github.io/tags/Swagger-UI/"/>
-    
-      <category term="Api" scheme="https://zhangshengjian.github.io/tags/Api/"/>
-    
-      <category term="Document" scheme="https://zhangshengjian.github.io/tags/Document/"/>
     
   </entry>
   
