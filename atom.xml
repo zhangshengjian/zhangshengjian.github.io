@@ -217,6 +217,31 @@
   </entry>
   
   <entry>
+    <title>学习计划</title>
+    <link href="https://zhangshengjian.github.io/2019/08/12/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"/>
+    <id>https://zhangshengjian.github.io/2019/08/12/学习计划/</id>
+    <published>2019-08-12T13:25:00.000Z</published>
+    <updated>2019-09-20T15:06:37.528Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="2019-09-20-2019-09-30"><a href="#2019-09-20-2019-09-30" class="headerlink" title="2019/09/20 - 2019/09/30"></a>2019/09/20 - 2019/09/30</h3><ul><li>VUE 入门学习</li></ul><h3 id="待排计划"><a href="#待排计划" class="headerlink" title="待排计划"></a>待排计划</h3><ul><li>SQL 能力（group by、join、left join、right join 等）</li><li>阶段性的总结</li><li>沟通能力</li><li>MyBatis plus</li><li>SpringBoot</li><li>SpringCloud</li><li>Zookeeper</li><li>Dubbo</li><li>VUE</li><li>Element UI</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;2019-09-20-2019-09-30&quot;&gt;&lt;a href=&quot;#2019-09-20-2019-09-30&quot; class=&quot;headerlink&quot; title=&quot;2019/09/20 - 2019/09/30&quot;&gt;&lt;/a&gt;2019/09/20 - 2019/09/
+      
+    
+    </summary>
+    
+      <category term="Other" scheme="https://zhangshengjian.github.io/categories/Other/"/>
+    
+    
+      <category term="Other" scheme="https://zhangshengjian.github.io/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
     <title>心灵鸡汤</title>
     <link href="https://zhangshengjian.github.io/2019/08/12/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/"/>
     <id>https://zhangshengjian.github.io/2019/08/12/心灵鸡汤/</id>
@@ -554,31 +579,6 @@
       <category term="JWT" scheme="https://zhangshengjian.github.io/tags/JWT/"/>
     
       <category term="Token" scheme="https://zhangshengjian.github.io/tags/Token/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Security</title>
-    <link href="https://zhangshengjian.github.io/2019/07/15/Spring-Security/"/>
-    <id>https://zhangshengjian.github.io/2019/07/15/Spring-Security/</id>
-    <published>2019-07-15T09:27:00.000Z</published>
-    <updated>2019-07-15T12:10:14.036Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Spring-Security-简介"><a href="#Spring-Security-简介" class="headerlink" title="Spring Security 简介"></a>Spring Security 简介</h4><blockquote><p>Spring Security 是一个强大的可高度定制的认证和授权框架，对于 Spring 应用来说它是一套 Web 安全标准。Spring Security 注重于为 Java 应用提供认证和授权功能，像所有的 Spring 项目一样，它对自定义需求具有强大的扩展性。</p></blockquote><h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><blockquote><p><a href="https://juejin.im/post/5cf90fa5e51d455d6d5357d3" target="_blank" rel="noopener">https://juejin.im/post/5cf90fa5e51d455d6d5357d3</a></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;Spring-Security-简介&quot;&gt;&lt;a href=&quot;#Spring-Security-简介&quot; class=&quot;headerlink&quot; title=&quot;Spring Security 简介&quot;&gt;&lt;/a&gt;Spring Security 简介&lt;/h4&gt;&lt;blockquo
-      
-    
-    </summary>
-    
-      <category term="Spring Security" scheme="https://zhangshengjian.github.io/categories/Spring-Security/"/>
-    
-    
-      <category term="Spring Security" scheme="https://zhangshengjian.github.io/tags/Spring-Security/"/>
     
   </entry>
   
