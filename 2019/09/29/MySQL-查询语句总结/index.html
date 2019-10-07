@@ -130,16 +130,18 @@
 
 
 
-  <meta name="description" content="make one more step.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="坚持到放弃">
-<meta property="og:url" content="https://zhangshengjian.github.io/tags/开发工具/index.html">
+  <meta name="description" content="单表查询简单查询查询所有字段注意：业务代码中一般不会这样使用，会写上所有的列名进行查询 1SELECT * FROM &amp;lt;table_name&amp;gt;; 查询指定的字段1SELECT &amp;lt;column1_name&amp;gt;,&amp;lt;columns_name&amp;gt;,... FROM &amp;lt;table_name&amp;gt;; 查询带有表别名注意：1.别名中如果有特殊符号或空格，需要用引号引起来；">
+<meta name="keywords" content="MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL 查询语句总结">
+<meta property="og:url" content="https://zhangshengjian.github.io/2019/09/29/MySQL-查询语句总结/index.html">
 <meta property="og:site_name" content="坚持到放弃">
-<meta property="og:description" content="make one more step.">
+<meta property="og:description" content="单表查询简单查询查询所有字段注意：业务代码中一般不会这样使用，会写上所有的列名进行查询 1SELECT * FROM &amp;lt;table_name&amp;gt;; 查询指定的字段1SELECT &amp;lt;column1_name&amp;gt;,&amp;lt;columns_name&amp;gt;,... FROM &amp;lt;table_name&amp;gt;; 查询带有表别名注意：1.别名中如果有特殊符号或空格，需要用引号引起来；">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-29T14:58:48.404Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="坚持到放弃">
-<meta name="twitter:description" content="make one more step.">
+<meta name="twitter:title" content="MySQL 查询语句总结">
+<meta name="twitter:description" content="单表查询简单查询查询所有字段注意：业务代码中一般不会这样使用，会写上所有的列名进行查询 1SELECT * FROM &amp;lt;table_name&amp;gt;; 查询指定的字段1SELECT &amp;lt;column1_name&amp;gt;,&amp;lt;columns_name&amp;gt;,... FROM &amp;lt;table_name&amp;gt;; 查询带有表别名注意：1.别名中如果有特殊符号或空格，需要用引号引起来；">
 
 
 
@@ -149,7 +151,7 @@
 
   
   
-  <link rel="canonical" href="https://zhangshengjian.github.io/tags/开发工具/">
+  <link rel="canonical" href="https://zhangshengjian.github.io/2019/09/29/MySQL-查询语句总结/">
 
 
 
@@ -159,7 +161,7 @@
   };
 </script>
 
-  <title>标签: 开发工具 | 坚持到放弃</title>
+  <title>MySQL 查询语句总结 | 坚持到放弃</title>
   
 
 
@@ -211,7 +213,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,7 +272,7 @@
         
         
           
-          <li class="menu-item menu-item-标签 menu-item-active">
+          <li class="menu-item menu-item-标签">
 
     
     
@@ -385,34 +387,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -465,57 +439,293 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>开发工具<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhangshengjian.github.io/2019/09/29/MySQL-查询语句总结/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张 胜 健 的 博 客">
+      <meta itemprop="description" content="make one more step.">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="坚持到放弃">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/07/18/开发工具篇/" itemprop="url">
-            
-              <span itemprop="name">开发工具篇</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">MySQL 查询语句总结
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-18T09:27:00+08:00" content="2019-07-18">
-          07-18
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-29 22:35:00 / 修改时间：22:58:48" itemprop="dateCreated datePublished" datetime="2019-09-29T22:35:00+08:00">2019-09-29</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="单表查询"><a href="#单表查询" class="headerlink" title="单表查询"></a>单表查询</h2><h3 id="简单查询"><a href="#简单查询" class="headerlink" title="简单查询"></a>简单查询</h3><h4 id="查询所有字段"><a href="#查询所有字段" class="headerlink" title="查询所有字段"></a>查询所有字段</h4><p><em>注意：业务代码中一般不会这样使用，会写上所有的列名进行查询</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM &lt;table_name&gt;;</span><br></pre></td></tr></table></figure>
+<h4 id="查询指定的字段"><a href="#查询指定的字段" class="headerlink" title="查询指定的字段"></a>查询指定的字段</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;column1_name&gt;,&lt;columns_name&gt;,... FROM &lt;table_name&gt;;</span><br></pre></td></tr></table></figure>
+<h4 id="查询带有表别名"><a href="#查询带有表别名" class="headerlink" title="查询带有表别名"></a>查询带有表别名</h4><p><em>注意：1.别名中如果有特殊符号或空格，需要用引号引起来；2.AS 可省略</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM &lt;table_name&gt; [AS] &lt;alias_name&gt;;</span><br></pre></td></tr></table></figure>
+<h4 id="查询带有列别名"><a href="#查询带有列别名" class="headerlink" title="查询带有列别名"></a>查询带有列别名</h4><p><em>注意：AS 可省略</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;column_name1&gt; [AS] &lt;alias_name1&gt;, &lt;column_name2&gt; [AS] &lt;alias_name2&gt; ... FROM &lt;table_name&gt;;</span><br></pre></td></tr></table></figure>
+<h4 id="查询去掉重复值"><a href="#查询去掉重复值" class="headerlink" title="查询去掉重复值"></a>查询去掉重复值</h4><p><em>注意：如果有多个字段，需要同时重复</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT &lt;column_name1&gt;,&lt;column_name2&gt;, ... FROM &lt;table_name&gt;;</span><br></pre></td></tr></table></figure>
+<h4 id="运算查询"><a href="#运算查询" class="headerlink" title="运算查询"></a>运算查询</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT (&lt;column1_name&gt; + &lt;column2_name&gt;) FROM &lt;table_name&gt;;</span><br></pre></td></tr></table></figure>
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">大于 &gt;</span><br><span class="line">小于 &lt;</span><br><span class="line">等于 =</span><br><span class="line">大于等于 &gt;=</span><br><span class="line">小于等于 &lt;=</span><br><span class="line">不等于 &lt;&gt;(!=)</span><br></pre></td></tr></table></figure>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">between…and… : 显示在某一区间的值(含头含尾)</span><br><span class="line">in(多个条件) : 或者(or)关系</span><br><span class="line">like: 模糊查询</span><br><span class="line">	% 代表零个或者多个任意字符.</span><br><span class="line">	_ 代表一个字符.</span><br><span class="line">is null : 判断是否为空</span><br></pre></td></tr></table></figure>
+<h3 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h3><p><em>注意：1.不写的话默认为升序 ASC；2.被排序的字段如果有多个，先按照第一个排序，再按照后边的依次排序；3.写在 sql 语句末尾</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM &lt;table_name&gt; ORDER BY &lt;column1_name&gt; ASC(升序)/DESC(降序);</span><br></pre></td></tr></table></figure>
+<h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><p><em>注意：select 之后 , from 之前</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sum(求和) : 指定列不是数值类型，计算结果为 0;</span><br><span class="line">count(统计数) : 不包含 null; 一般用 *;</span><br><span class="line">max(最大值) : 如果是字符串类型，使用字符串排序;</span><br><span class="line">min(最小值) : 如果是字符串类型，使用字符串排序;</span><br><span class="line">avg(平均值) : 指定列不是数值类型，计算结果为 0;</span><br></pre></td></tr></table></figure>
+<h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><p><em>注意：被分组的字段,一般都写在  select 后作为查询条件 , 方便查看</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">group by 被分组的字段 [having 条件]</span><br><span class="line">where : 分组查询前过滤</span><br><span class="line">having : 分组查询后过滤</span><br></pre></td></tr></table></figure>
+<h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><p><em>注意：数据库中行的索引是从0开始，列的索引是从1开始</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">使用关键字 LIMIT</span><br><span class="line">格式一: 只要前 x 条数据</span><br><span class="line">SELECT * FROM &lt;table_name&gt; LIMIT x;</span><br><span class="line"></span><br><span class="line">格式二: 分页查询</span><br><span class="line">SELECT * FROM &lt;table_name&gt; LIMIT m, n;</span><br><span class="line">m : 每页数据的开始行数（变化的）</span><br><span class="line">n : 每页显示的数量（固定的）</span><br></pre></td></tr></table></figure>
+<h2 id="多表关系"><a href="#多表关系" class="headerlink" title="多表关系"></a>多表关系</h2><h3 id="一对多关系"><a href="#一对多关系" class="headerlink" title="一对多关系"></a>一对多关系</h3><p>从表使用主表的主键作为主键（外键）<br><em>注意：1.主表中有的数据 , 从表中可以没有；2.主表必须有数据, 才能向从表中添加数据；3.删除主表的数据 , 要先删除从表之后 , 才能删除主表</em></p>
 
       
     </div>
 
+    
+      
+
+
+    
+
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align: center;font-size: 13px;letter-spacing: 10px;user-select: none;margin-top: 50px;color: #bbb;">本文结束啦 <i class="fa fa-star"></i> 感谢您阅读</div>
+    
+</div>
+
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>如果你觉得这篇文章对你有用，欢迎赞赏哦~</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="张 胜 健 的 博 客 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.png" alt="张 胜 健 的 博 客 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MySQL/" rel="tag"><i class="fa fa-tag"></i> MySQL</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/20/Gradle-命令/" rel="next" title="Gradle 命令">
+                <i class="fa fa-chevron-left"></i> Gradle 命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      <!---->
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDgxMi8yMTMzMw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -535,8 +745,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -858,6 +1077,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#单表查询"><span class="nav-number">1.</span> <span class="nav-text">单表查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单查询"><span class="nav-number">1.1.</span> <span class="nav-text">简单查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查询所有字段"><span class="nav-number">1.1.1.</span> <span class="nav-text">查询所有字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询指定的字段"><span class="nav-number">1.1.2.</span> <span class="nav-text">查询指定的字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询带有表别名"><span class="nav-number">1.1.3.</span> <span class="nav-text">查询带有表别名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询带有列别名"><span class="nav-number">1.1.4.</span> <span class="nav-text">查询带有列别名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询去掉重复值"><span class="nav-number">1.1.5.</span> <span class="nav-text">查询去掉重复值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运算查询"><span class="nav-number">1.1.6.</span> <span class="nav-text">运算查询</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件查询"><span class="nav-number">1.2.</span> <span class="nav-text">条件查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#比较运算符"><span class="nav-number">1.2.1.</span> <span class="nav-text">比较运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">1.2.2.</span> <span class="nav-text">逻辑运算符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序查询"><span class="nav-number">1.3.</span> <span class="nav-text">排序查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合函数"><span class="nav-number">1.4.</span> <span class="nav-text">聚合函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组查询"><span class="nav-number">1.5.</span> <span class="nav-text">分组查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分页查询"><span class="nav-number">1.6.</span> <span class="nav-text">分页查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多表关系"><span class="nav-number">2.</span> <span class="nav-text">多表关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一对多关系"><span class="nav-number">2.1.</span> <span class="nav-text">一对多关系</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -1042,6 +1278,10 @@ setInterval("createtime()",250);
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -1057,6 +1297,24 @@ setInterval("createtime()",250);
 
   
 
+
+  
+    
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+  
 
 
   
